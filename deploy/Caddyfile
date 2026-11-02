@@ -1,0 +1,7 @@
+# Caddy automatically obtains and renews a free HTTPS certificate for {$DOMAIN}.
+# It forwards all traffic to the frontend container (nginx), which serves the
+# built site and proxies /api/ to the backend.
+{$DOMAIN} {
+	encode gzip
+	reverse_proxy frontend:5173
+}
