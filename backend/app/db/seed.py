@@ -9,11 +9,31 @@ import re
 from app.core.config import settings
 from app.core.security import hash_password
 from app.db.session import SessionLocal
-from app.models.enums import UserRole
+from app.models.enums import PlanType, UserRole
 from app.models.gym import Gym
+from app.models.membership import MembershipPlan
 from app.models.user import User
 
 logger = logging.getLogger("seed")
+
+_ELITE_PERKS = [
+    "Unlimited gym & equipment access",
+    "All group classes (HIIT, strength, yoga)",
+    "Personal locker & showers",
+    "Monthly fitness assessment",
+    "Diet & nutrition guidance",
+    "Access 7 days a week",
+]
+_DEFAULT_PLANS = [
+    dict(name="ELITE", type=PlanType.monthly, duration_days=30, price=2499,
+         description="Full-access membership billed monthly."),
+    dict(name="ELITE", type=PlanType.quarterly, duration_days=90, price=5999,
+         description="Full-access membership for 3 months."),
+    dict(name="ELITE", type=PlanType.half_yearly, duration_days=180, price=9999,
+         description="Full-access membership for 6 months."),
+    dict(name="ELITE", type=PlanType.yearly, duration_days=365, price=16999,
+         description="Full-access membership for a full year — best value."),
+]
 
 
 def _slug(name: str) -> str:
@@ -50,6 +70,15 @@ def run() -> None:
             )
             db.add(admin)
             logger.info("Created admin user %s", admin.email)
+
+        # Seed default membership plans only if this gym has none yet.
+        plan_count = (
+            db.query(MembershipPlan).filter(MembershipPlan.gym_id == gym.id).count()
+        )
+        if plan_count == 0:
+            for p in _DEFAULT_PLANS:
+                db.add(MembershipPlan(gym_id=gym.id, is_active=True, features=_ELITE_PERKS, **p))
+            logger.info("Created %d default membership plans", len(_DEFAULT_PLANS))
 
         db.commit()
         logger.info("Bootstrap complete. Gym slug: %s", gym.slug)
