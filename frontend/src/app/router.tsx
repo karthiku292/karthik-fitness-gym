@@ -13,12 +13,14 @@ import { ClassesPage } from "@/pages/public/Classes";
 import { AboutPage } from "@/pages/public/About";
 import { ContactPage } from "@/pages/public/Contact";
 import { ExercisesPage } from "@/pages/public/Exercises";
+import { LocationsPage } from "@/pages/public/Locations";
 
 // Authenticated app
 import { LoginPage } from "@/pages/Login";
 import { DashboardPage } from "@/pages/Dashboard";
 import { SettingsPage } from "@/pages/Settings";
 import { MembersPage } from "@/pages/Members";
+import { BranchesPage } from "@/pages/Branches";
 import { PlansPage } from "@/pages/Plans";
 import { RenewalsPage } from "@/pages/Renewals";
 import { PaymentsPage } from "@/pages/Payments";
@@ -35,6 +37,7 @@ export const router = createBrowserRouter([
       { path: "trainers", element: <TrainersPage /> },
       { path: "classes", element: <ClassesPage /> },
       { path: "exercises", element: <ExercisesPage /> },
+      { path: "locations", element: <LocationsPage /> },
       { path: "about", element: <AboutPage /> },
       { path: "contact", element: <ContactPage /> },
     ],
@@ -64,6 +67,7 @@ export const router = createBrowserRouter([
     children: [
       { index: true, element: <DashboardPage /> },
       { path: "members", element: <MembersPage /> },
+      { path: "branches", element: <BranchesPage /> },
       { path: "plans", element: <PlansPage /> },
       { path: "renewals", element: <RenewalsPage /> },
       { path: "payments", element: <PaymentsPage /> },

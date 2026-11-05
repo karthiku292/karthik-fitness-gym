@@ -1,5 +1,6 @@
 """Import all models so Alembic and Base.metadata see them."""
 from app.models.gym import Gym
+from app.models.branch import Branch
 from app.models.user import User
 from app.models.member import Member
 from app.models.trainer import Trainer
@@ -18,6 +19,7 @@ from app.models.audit import AuditLog
 
 __all__ = [
     "Gym",
+    "Branch",
     "User",
     "Member",
     "Trainer",

@@ -25,6 +25,7 @@ export const BRAND = {
     { label: "Trainers", to: "/trainers" },
     { label: "Classes", to: "/classes" },
     { label: "Exercises", to: "/exercises" },
+    { label: "Locations", to: "/locations" },
     { label: "About", to: "/about" },
     { label: "Contact", to: "/contact" },
   ],

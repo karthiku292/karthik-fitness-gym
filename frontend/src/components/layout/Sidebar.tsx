@@ -15,6 +15,7 @@ import {
   Settings,
   CalendarCheck,
   RefreshCw,
+  MapPin,
 } from "lucide-react";
 import type { Role } from "@/lib/types";
 
@@ -28,6 +29,7 @@ interface NavItem {
 const NAV: NavItem[] = [
   { to: "/app", label: "Dashboard", icon: LayoutDashboard, roles: ["admin", "trainer"] },
   { to: "/app/members", label: "Members", icon: Users, roles: ["admin"] },
+  { to: "/app/branches", label: "Branches", icon: MapPin, roles: ["admin"] },
   { to: "/app/plans", label: "Membership Plans", icon: BadgeIndianRupee, roles: ["admin"] },
   { to: "/app/renewals", label: "Renewals", icon: RefreshCw, roles: ["admin"] },
   { to: "/app/payments", label: "Payments", icon: CreditCard, roles: ["admin"] },

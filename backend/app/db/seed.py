@@ -9,6 +9,7 @@ import re
 from app.core.config import settings
 from app.core.security import hash_password
 from app.db.session import SessionLocal
+from app.models.branch import Branch
 from app.models.enums import PlanType, UserRole
 from app.models.gym import Gym
 from app.models.membership import MembershipPlan
@@ -33,6 +34,24 @@ _DEFAULT_PLANS = [
          description="Full-access membership for 6 months."),
     dict(name="ELITE", type=PlanType.yearly, duration_days=365, price=16999,
          description="Full-access membership for a full year — best value."),
+]
+
+
+_DEFAULT_BRANCHES = [
+    dict(
+        name="Jubilee Hills", city="Hyderabad",
+        address="3rd Floor, Fitness Avenue, Jubilee Hills, Hyderabad",
+        phone="+91 98765 43210", hours="Mon–Sat 5:00 AM – 10:00 PM",
+        photo_url="https://images.unsplash.com/photo-1637666062717-1c6bcfa4a4df?auto=format&fit=crop&w=800&q=80",
+        map_url="https://maps.google.com",
+    ),
+    dict(
+        name="Gachibowli", city="Hyderabad",
+        address="Plot 12, Tech Park Road, Gachibowli, Hyderabad",
+        phone="+91 98765 43211", hours="Mon–Sat 5:00 AM – 10:00 PM",
+        photo_url="https://images.unsplash.com/photo-1558611848-73f7eb4001a1?auto=format&fit=crop&w=800&q=80",
+        map_url="https://maps.google.com",
+    ),
 ]
 
 
@@ -70,6 +89,12 @@ def run() -> None:
             )
             db.add(admin)
             logger.info("Created admin user %s", admin.email)
+
+        # Seed example branches only if this gym has none yet (admin edits these).
+        if db.query(Branch).filter(Branch.gym_id == gym.id).count() == 0:
+            for br in _DEFAULT_BRANCHES:
+                db.add(Branch(gym_id=gym.id, is_active=True, **br))
+            logger.info("Created %d example branches", len(_DEFAULT_BRANCHES))
 
         # Seed default membership plans only if this gym has none yet.
         plan_count = (
