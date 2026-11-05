@@ -1,7 +1,8 @@
 import { FormEvent, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
-import { BRAND, IMAGES } from "@/brand";
+import { IMAGES } from "@/brand";
+import { useBranding } from "@/lib/branding";
 import { Container, Section, Reveal } from "@/components/public/primitives";
 import { PageHero } from "@/components/public/PageHero";
 import { Input, Button } from "@/components/ui";
@@ -9,6 +10,7 @@ import { Input, Button } from "@/components/ui";
 export function ContactPage() {
   const [params] = useSearchParams();
   const presetPlan = params.get("plan");
+  const b = useBranding();
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -27,14 +29,14 @@ export function ContactPage() {
     const body = encodeURIComponent(
       `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n\n${message}`
     );
-    window.location.href = `mailto:${BRAND.email}?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:${b.email}?subject=${subject}&body=${body}`;
   }
 
   const contactItems = [
-    { Icon: MapPin, label: "Visit", value: BRAND.address },
-    { Icon: Phone, label: "Call", value: BRAND.phone, href: `tel:${BRAND.phone}` },
-    { Icon: Mail, label: "Email", value: BRAND.email, href: `mailto:${BRAND.email}` },
-    { Icon: Clock, label: "Hours", value: BRAND.hours },
+    { Icon: MapPin, label: "Visit", value: b.address },
+    { Icon: Phone, label: "Call", value: b.phone, href: `tel:${b.phone}` },
+    { Icon: Mail, label: "Email", value: b.email, href: `mailto:${b.email}` },
+    { Icon: Clock, label: "Hours", value: b.hours },
   ];
 
   return (

@@ -5,7 +5,9 @@ from pydantic import BaseModel
 
 
 class GymPublic(BaseModel):
-    """Branding info safe to expose pre-login (by slug)."""
+    """Branding info safe to expose pre-login. Includes contact details and a
+    free-form `settings` dict (tagline, hours, socials...) so each gym can fully
+    brand their own copy."""
 
     id: int
     name: str
@@ -13,17 +15,17 @@ class GymPublic(BaseModel):
     logo_url: Optional[str] = None
     primary_color: str
     accent_color: str
+    address: Optional[str] = None
+    phone: Optional[str] = None
+    email: Optional[str] = None
+    currency: str = "INR"
+    settings: dict = {}
 
     model_config = {"from_attributes": True}
 
 
 class GymOut(GymPublic):
-    address: Optional[str] = None
-    phone: Optional[str] = None
-    email: Optional[str] = None
-    currency: str
     timezone: str
-    settings: dict
 
     model_config = {"from_attributes": True}
 

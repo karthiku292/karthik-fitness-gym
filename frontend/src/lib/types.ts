@@ -23,6 +23,11 @@ export interface GymBranding {
   logo_url?: string | null;
   primary_color: string;
   accent_color: string;
+  address?: string | null;
+  phone?: string | null;
+  email?: string | null;
+  currency?: string;
+  settings?: Record<string, unknown>;
 }
 
 export type MemberStatus = "active" | "inactive" | "expired";

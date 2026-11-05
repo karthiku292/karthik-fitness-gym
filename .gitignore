@@ -24,3 +24,7 @@ dist/
 
 # Local SQLite dev database
 *.db
+
+# Scratch/temp files used during development
+_*.txt
+_*.py

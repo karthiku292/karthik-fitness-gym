@@ -3,9 +3,10 @@ import { Navigate, Outlet } from "react-router-dom";
 import { Menu, LogOut, Search } from "lucide-react";
 import { Sidebar } from "./Sidebar";
 import { useAuthStore } from "@/lib/auth";
-import { BRAND } from "@/brand";
+import { useBranding } from "@/lib/branding";
 
 export function AppLayout() {
+  const b = useBranding();
   const [open, setOpen] = useState(false);
   const user = useAuthStore((s) => s.user);
   const logout = useAuthStore((s) => s.logout);
@@ -16,7 +17,7 @@ export function AppLayout() {
 
   return (
     <div className="min-h-screen bg-base">
-      <Sidebar role={user.role} gymName={BRAND.short} open={open} />
+      <Sidebar role={user.role} gymName={b.short} logoUrl={b.logoUrl} open={open} />
 
       <div className="lg:pl-64">
         <header className="sticky top-0 z-30 flex items-center gap-3 border-b border-border bg-base/80 px-4 py-3 backdrop-blur">

@@ -4,6 +4,10 @@
 
 :root {
   color-scheme: dark;
+  /* Brand accent (RGB channels) — overridden at runtime per gym. Default gold. */
+  --brand-light: 243 223 162;
+  --brand: 212 175 55;
+  --brand-dark: 191 149 63;
 }
 
 html {
@@ -20,17 +24,22 @@ body {
   @apply bg-base text-white antialiased font-sans;
 }
 
-/* Gold gradient text helper */
+/* Gold gradient text helper (follows the gym's accent color) */
 .text-gradient-gold {
-  background: linear-gradient(135deg, #f3dfa2 0%, #d4af37 55%, #bf953f 100%);
+  background: linear-gradient(
+    135deg,
+    rgb(var(--brand-light)) 0%,
+    rgb(var(--brand)) 55%,
+    rgb(var(--brand-dark)) 100%
+  );
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
-/* Thin gold divider */
+/* Thin accent divider */
 .gold-rule {
-  background: linear-gradient(90deg, transparent, #d4af37, transparent);
+  background: linear-gradient(90deg, transparent, rgb(var(--brand)), transparent);
 }
 
 /* Display headings */

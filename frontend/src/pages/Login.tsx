@@ -5,11 +5,12 @@ import { Dumbbell, ArrowLeft, Eye, EyeOff } from "lucide-react";
 import { Button, Card, Input } from "@/components/ui";
 import { useAuthStore } from "@/lib/auth";
 import { apiErrorMessage } from "@/lib/api";
-import { BRAND } from "@/brand";
+import { useBranding } from "@/lib/branding";
 
 export function LoginPage() {
   const navigate = useNavigate();
   const login = useAuthStore((s) => s.login);
+  const b = useBranding();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPw, setShowPw] = useState(false);
@@ -51,10 +52,14 @@ export function LoginPage() {
         className="relative w-full max-w-md"
       >
         <div className="mb-6 flex flex-col items-center gap-3">
-          <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-gradient text-[#080808]">
-            <Dumbbell className="h-7 w-7" />
-          </div>
-          <h1 className="font-display text-xl font-bold uppercase tracking-wide">{BRAND.name}</h1>
+          {b.logoUrl ? (
+            <img src={b.logoUrl} alt={b.name} className="h-14 w-14 rounded-2xl object-cover" />
+          ) : (
+            <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-gradient text-[#080808]">
+              <Dumbbell className="h-7 w-7" />
+            </div>
+          )}
+          <h1 className="font-display text-xl font-bold uppercase tracking-wide">{b.name}</h1>
           <p className="text-sm text-muted">Sign in to your account</p>
         </div>
 

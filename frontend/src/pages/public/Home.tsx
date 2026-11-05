@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Dumbbell, Star, ShieldCheck, Clock, Trophy } from "lucide-react";
-import { BRAND, IMAGES } from "@/brand";
+import { IMAGES } from "@/brand";
+import { useBranding } from "@/lib/branding";
 import {
   Container,
   Counter,
@@ -15,6 +16,7 @@ import { FaqAccordion } from "@/components/public/Faq";
 import { PROGRAMS, STATS, TRAINERS, TESTIMONIALS } from "@/features/public/content";
 
 export function HomePage() {
+  const b = useBranding();
   return (
     <>
       {/* ---------------- Hero ---------------- */}
@@ -29,7 +31,7 @@ export function HomePage() {
         <Container className="relative z-10 pt-24">
           <div className="max-w-2xl">
             <Reveal>
-              <Eyebrow>{BRAND.name}</Eyebrow>
+              <Eyebrow>{b.name}</Eyebrow>
             </Reveal>
             <Reveal delay={0.08}>
               <h1 className="font-display mt-5 text-5xl font-bold uppercase leading-[0.95] tracking-tightish sm:text-6xl lg:text-7xl">
@@ -251,7 +253,7 @@ export function HomePage() {
               Your transformation <span className="text-gradient-gold">starts today</span>
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-muted">
-              Join {BRAND.name} and train in a space built for serious results.
+              Join {b.name} and train in a space built for serious results.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-4">
               <Link to="/memberships" className="rounded-xl bg-brand-gradient px-8 py-3.5 text-sm font-semibold text-[#080808] shadow-gold transition hover:brightness-105">

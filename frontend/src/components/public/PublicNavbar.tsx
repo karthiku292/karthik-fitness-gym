@@ -3,6 +3,7 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 import { clsx } from "clsx";
 import { Dumbbell, Menu, X } from "lucide-react";
 import { BRAND } from "@/brand";
+import { useBranding } from "@/lib/branding";
 import { useAuthStore } from "@/lib/auth";
 
 export function PublicNavbar() {
@@ -10,6 +11,7 @@ export function PublicNavbar() {
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
   const isAuthed = useAuthStore((s) => !!s.tokens);
+  const b = useBranding();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 16);
@@ -27,11 +29,15 @@ export function PublicNavbar() {
     >
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 sm:px-6 lg:px-8">
         <Link to="/" className="flex items-center gap-2.5" onClick={() => setOpen(false)}>
-          <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-brand-gradient text-[#080808]">
-            <Dumbbell className="h-5 w-5" />
-          </span>
+          {b.logoUrl ? (
+            <img src={b.logoUrl} alt={b.name} className="h-9 w-9 rounded-lg object-cover" />
+          ) : (
+            <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-brand-gradient text-[#080808]">
+              <Dumbbell className="h-5 w-5" />
+            </span>
+          )}
           <span className="font-display text-lg font-bold uppercase tracking-wide">
-            {BRAND.short}
+            {b.short}
           </span>
         </Link>
 
