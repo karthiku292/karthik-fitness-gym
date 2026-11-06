@@ -1,8 +1,10 @@
 """FastAPI application factory for the Gym Management System."""
 import logging
+from pathlib import Path
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
 from slowapi import Limiter, _rate_limit_exceeded_handler
 from slowapi.errors import RateLimitExceeded
 from slowapi.util import get_remote_address
@@ -42,6 +44,22 @@ def create_app() -> FastAPI:
         return {"status": "ok", "app": settings.APP_NAME, "env": settings.ENVIRONMENT}
 
     app.include_router(api_router, prefix=settings.API_V1_PREFIX)
+
+    # Serve the built React app from the same origin as the API (single-service
+    # deploy). API, /docs and /health are registered above, so they take
+    # precedence; everything else falls through to the SPA's index.html.
+    if settings.STATIC_DIR:
+        static_path = Path(settings.STATIC_DIR)
+        if static_path.is_dir():
+            index_file = static_path / "index.html"
+
+            @app.get("/{full_path:path}", include_in_schema=False)
+            async def serve_spa(full_path: str):
+                candidate = static_path / full_path
+                if full_path and candidate.is_file():
+                    return FileResponse(candidate)
+                return FileResponse(index_file)
+
     return app
 
 

@@ -1,0 +1,12 @@
+# Keep the Docker build context small and reproducible.
+.git
+**/node_modules
+**/.venv
+**/__pycache__
+**/*.pyc
+frontend/dist
+backend/gym.db
+*.db
+deploy
+.kiro
+**/_*.txt

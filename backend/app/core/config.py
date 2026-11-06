@@ -20,6 +20,10 @@ class Settings(BaseSettings):
     ENVIRONMENT: str = "development"
     DEBUG: bool = True
     API_V1_PREFIX: str = "/api/v1"
+    # Directory of the built frontend (dist). When set, FastAPI serves the
+    # web app from the same origin as the API (used in the single-service
+    # Docker/Render deploy). Empty in local dev (Vite serves the frontend).
+    STATIC_DIR: str = ""
 
     # Security
     SECRET_KEY: str = "change-me"
@@ -40,9 +44,19 @@ class Settings(BaseSettings):
 
     @property
     def sqlalchemy_url(self) -> str:
-        """Database URL with relative SQLite paths anchored to the backend dir,
-        so the same file is used regardless of the process working directory."""
+        """Database URL normalized for SQLAlchemy.
+
+        - Managed Postgres providers (Render, Heroku, etc.) hand out URLs with
+          the ``postgres://`` or ``postgresql://`` scheme; pin them to the
+          psycopg2 driver so SQLAlchemy connects correctly.
+        - Relative SQLite paths are anchored to the backend dir so the same
+          file is used regardless of the process working directory.
+        """
         url = self.DATABASE_URL
+        if url.startswith("postgres://"):
+            url = "postgresql+psycopg2://" + url[len("postgres://"):]
+        elif url.startswith("postgresql://"):
+            url = "postgresql+psycopg2://" + url[len("postgresql://"):]
         if url.startswith("sqlite") and ":///" in url:
             prefix, path = url.split(":///", 1)
             is_windows_abs = len(path) > 1 and path[1] == ":"

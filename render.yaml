@@ -1,0 +1,38 @@
+# Render Blueprint — deploys the whole gym app with a few clicks.
+# In Render: New + → Blueprint → connect this GitHub repo → Apply.
+# Render reads this file, creates the database and the web service, builds the
+# Docker image, and gives you a public HTTPS URL like
+#   https://karthik-fitness-gym.onrender.com
+services:
+  - type: web
+    name: karthik-fitness-gym
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: karthik-gym-db
+          property: connectionString
+      - key: SECRET_KEY
+        generateValue: true
+      - key: ENVIRONMENT
+        value: production
+      - key: DEBUG
+        value: "false"
+      - key: APP_NAME
+        value: KARTHIK FITNESS GYM
+      - key: BOOTSTRAP_GYM_NAME
+        value: KARTHIK FITNESS GYM
+      - key: BOOTSTRAP_ADMIN_EMAIL
+        value: karthiknagidi42@gmail.com
+      - key: BOOTSTRAP_ADMIN_PASSWORD
+        value: Karthik2026Admin
+
+databases:
+  - name: karthik-gym-db
+    plan: free
+    databaseName: gym
+    user: gym
