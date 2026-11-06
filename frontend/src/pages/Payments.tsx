@@ -171,7 +171,7 @@ export function PaymentsPage() {
                   contentStyle={{ background: "#151515", border: "1px solid #2A2A2A", borderRadius: 12, color: "#fff" }}
                   formatter={(v: number) => [inr(v), "Revenue"]}
                 />
-                <Bar dataKey="total" fill="#D4AF37" radius={[6, 6, 0, 0]} />
+                <Bar dataKey="total" fill="#B794F6" radius={[6, 6, 0, 0]} />
               </BarChart>
             </ResponsiveContainer>
           </div>

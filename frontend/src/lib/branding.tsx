@@ -24,7 +24,7 @@ const fallback: Branding = {
   tagline: BRAND.tagline,
   logoUrl: null,
   primaryColor: "#080808",
-  accentColor: "#D4AF37",
+  accentColor: "#B794F6",
   email: BRAND.email,
   phone: BRAND.phone,
   address: BRAND.address,

@@ -4,10 +4,10 @@
 
 :root {
   color-scheme: dark;
-  /* Brand accent (RGB channels) — overridden at runtime per gym. Default gold. */
-  --brand-light: 243 223 162;
-  --brand: 212 175 55;
-  --brand-dark: 191 149 63;
+  /* Brand accent (RGB channels) — overridden at runtime per gym. Default lavender. */
+  --brand-light: 214 188 250;
+  --brand: 183 148 246;
+  --brand-dark: 150 121 202;
 }
 
 html {

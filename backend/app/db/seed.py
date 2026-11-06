@@ -72,6 +72,14 @@ _DEFAULT_TRAINERS = [
 ]
 
 
+# Brand theme: lavender accent on a near-black background.
+BRAND_PRIMARY = "#080808"
+BRAND_ACCENT = "#B794F6"
+# Old auto-generated defaults we are allowed to overwrite on upgrade. An admin's
+# deliberate custom color is anything NOT in this set, so it is left untouched.
+_LEGACY_COLORS = {"#f97316", "#d4af37", "#0a0a0b", "#0a0a0a", ""}
+
+
 def _slug(name: str) -> str:
     s = re.sub(r"[^a-z0-9]+", "-", name.strip().lower())
     return s.strip("-") or "gym"
@@ -85,10 +93,19 @@ def run() -> None:
             gym = Gym(
                 name=settings.BOOTSTRAP_GYM_NAME,
                 slug=_slug(settings.BOOTSTRAP_GYM_NAME),
+                primary_color=BRAND_PRIMARY,
+                accent_color=BRAND_ACCENT,
             )
             db.add(gym)
             db.flush()
             logger.info("Created gym '%s' (id=%s)", gym.name, gym.id)
+        else:
+            # Upgrade older default colors to the lavender brand theme, but keep
+            # any color the admin deliberately picked in Settings.
+            if (gym.accent_color or "").lower() in _LEGACY_COLORS:
+                gym.accent_color = BRAND_ACCENT
+            if (gym.primary_color or "").lower() in _LEGACY_COLORS:
+                gym.primary_color = BRAND_PRIMARY
 
         admin = (
             db.query(User)
