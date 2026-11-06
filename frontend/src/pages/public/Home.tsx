@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 import { ArrowRight, Dumbbell, Star, ShieldCheck, Clock, Trophy } from "lucide-react";
 import { IMAGES } from "@/brand";
 import { useBranding } from "@/lib/branding";
+import { DisplayTrainer, getDisplayTrainers } from "@/features/trainers/api";
 import {
   Container,
   Counter,
@@ -13,10 +15,18 @@ import {
 } from "@/components/public/primitives";
 import { MembershipPack } from "@/components/public/MembershipPack";
 import { FaqAccordion } from "@/components/public/Faq";
-import { PROGRAMS, STATS, TRAINERS, TESTIMONIALS } from "@/features/public/content";
+import { PROGRAMS, STATS, TESTIMONIALS } from "@/features/public/content";
 
 export function HomePage() {
   const b = useBranding();
+  const [trainers, setTrainers] = useState<DisplayTrainer[]>([]);
+  useEffect(() => {
+    let active = true;
+    getDisplayTrainers().then((t) => active && setTrainers(t.slice(0, 4)));
+    return () => {
+      active = false;
+    };
+  }, []);
   return (
     <>
       {/* ---------------- Hero ---------------- */}
@@ -173,14 +183,14 @@ export function HomePage() {
             subtitle="Certified professionals dedicated to coaching you safely to your goals."
           />
           <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {TRAINERS.map((t, i) => (
-              <Reveal key={t.name} delay={i * 0.06}>
+            {trainers.map((t, i) => (
+              <Reveal key={`${t.name}-${i}`} delay={i * 0.06}>
                 <div className="group overflow-hidden rounded-2xl border border-border bg-surface">
-                  <Media src={t.image} alt={t.name} className="aspect-[3/4]" />
+                  <Media src={t.photo} alt={t.name} className="aspect-[3/4]" />
                   <div className="p-5">
                     <h3 className="font-display text-lg font-bold uppercase">{t.name}</h3>
                     <p className="text-sm text-brand">{t.specialization}</p>
-                    <p className="mt-2 text-xs text-muted">{t.experience} · {t.certifications.join(", ")}</p>
+                    {t.bio && <p className="mt-2 line-clamp-2 text-xs text-muted">{t.bio}</p>}
                   </div>
                 </div>
               </Reveal>

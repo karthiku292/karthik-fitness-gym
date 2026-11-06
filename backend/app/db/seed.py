@@ -13,6 +13,7 @@ from app.models.branch import Branch
 from app.models.enums import PlanType, UserRole
 from app.models.gym import Gym
 from app.models.membership import MembershipPlan
+from app.models.trainer import Trainer
 from app.models.user import User
 
 logger = logging.getLogger("seed")
@@ -52,6 +53,22 @@ _DEFAULT_BRANCHES = [
         photo_url="https://images.unsplash.com/photo-1558611848-73f7eb4001a1?auto=format&fit=crop&w=800&q=80",
         map_url="https://maps.google.com",
     ),
+]
+
+
+_DEFAULT_TRAINERS = [
+    dict(name="Arjun Mehta", specialization="Strength & Conditioning",
+         bio="Former national powerlifter helping members build serious strength with bulletproof technique.",
+         photo_url="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=600&q=80"),
+    dict(name="Priya Nair", specialization="Fat Loss & Nutrition",
+         bio="Turns sustainable nutrition into results, specialising in body recomposition.",
+         photo_url="https://images.unsplash.com/photo-1594381898411-846e7d193883?auto=format&fit=crop&w=600&q=80"),
+    dict(name="Rohan Das", specialization="Hypertrophy & Bodybuilding",
+         bio="Competition prep coach obsessed with the details that build award-winning physiques.",
+         photo_url="https://images.unsplash.com/photo-1567013127542-490d757e51fc?auto=format&fit=crop&w=600&q=80"),
+    dict(name="Sana Kapoor", specialization="Yoga & Mobility",
+         bio="Blends traditional yoga with modern mobility science for resilient, pain-free movement.",
+         photo_url="https://images.unsplash.com/photo-1609899537878-88d5ba429bdf?auto=format&fit=crop&w=600&q=80"),
 ]
 
 
@@ -95,6 +112,12 @@ def run() -> None:
             for br in _DEFAULT_BRANCHES:
                 db.add(Branch(gym_id=gym.id, is_active=True, **br))
             logger.info("Created %d example branches", len(_DEFAULT_BRANCHES))
+
+        # Seed example trainers only if this gym has none yet (admin edits these).
+        if db.query(Trainer).filter(Trainer.gym_id == gym.id).count() == 0:
+            for tr in _DEFAULT_TRAINERS:
+                db.add(Trainer(gym_id=gym.id, is_active=True, **tr))
+            logger.info("Created %d example trainers", len(_DEFAULT_TRAINERS))
 
         # Seed default membership plans only if this gym has none yet.
         plan_count = (

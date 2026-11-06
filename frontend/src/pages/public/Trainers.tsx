@@ -1,11 +1,21 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Award } from "lucide-react";
 import { IMAGES } from "@/brand";
-import { Container, Section, Reveal, Media } from "@/components/public/primitives";
+import { Container, Section, Reveal } from "@/components/public/primitives";
 import { PageHero } from "@/components/public/PageHero";
-import { TRAINERS } from "@/features/public/content";
+import { DisplayTrainer, getDisplayTrainers } from "@/features/trainers/api";
 
 export function TrainersPage() {
+  const [trainers, setTrainers] = useState<DisplayTrainer[]>([]);
+
+  useEffect(() => {
+    let active = true;
+    getDisplayTrainers().then((t) => active && setTrainers(t));
+    return () => {
+      active = false;
+    };
+  }, []);
+
   return (
     <>
       <PageHero
@@ -18,24 +28,22 @@ export function TrainersPage() {
       <Section>
         <Container>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-            {TRAINERS.map((t, i) => (
-              <Reveal key={t.name} delay={i * 0.06}>
+            {trainers.map((t, i) => (
+              <Reveal key={`${t.name}-${i}`} delay={(i % 2) * 0.06}>
                 <div className="grid overflow-hidden rounded-2xl border border-border bg-surface sm:grid-cols-[200px_1fr]">
-                  <Media src={t.image} alt={t.name} className="aspect-[3/4] sm:aspect-auto" overlay={false} />
+                  <div className="aspect-[3/4] overflow-hidden bg-surface-2 sm:aspect-auto">
+                    {t.photo ? (
+                      <img src={t.photo} alt={t.name} loading="lazy" className="h-full w-full object-cover" />
+                    ) : (
+                      <div className="flex h-full w-full items-center justify-center text-4xl font-bold text-brand">
+                        {t.name.charAt(0)}
+                      </div>
+                    )}
+                  </div>
                   <div className="p-6">
                     <h3 className="font-display text-xl font-bold uppercase">{t.name}</h3>
                     <p className="text-sm font-medium text-brand">{t.specialization}</p>
-                    <p className="mt-3 text-sm text-muted">{t.bio}</p>
-                    <div className="mt-4 space-y-2 text-sm">
-                      <p className="text-white/80"><span className="text-muted">Experience:</span> {t.experience}</p>
-                      <div className="flex flex-wrap gap-2">
-                        {t.certifications.map((c) => (
-                          <span key={c} className="inline-flex items-center gap-1 rounded-full bg-brand/10 px-3 py-1 text-xs text-brand">
-                            <Award className="h-3 w-3" /> {c}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
+                    {t.bio && <p className="mt-3 text-sm text-muted">{t.bio}</p>}
                   </div>
                 </div>
               </Reveal>
