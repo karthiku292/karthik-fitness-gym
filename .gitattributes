@@ -1,0 +1,6 @@
+# Deploy-critical files must use LF so they run correctly in Linux containers,
+# regardless of the contributor's OS or git autocrlf setting.
+Dockerfile text eol=lf
+*.sh text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
