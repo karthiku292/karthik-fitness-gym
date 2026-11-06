@@ -33,12 +33,18 @@ def _issue_tokens(user: User) -> Token:
 
 @router.post("/login", response_model=Token)
 def login(db: DbSession, form: OAuth2PasswordRequestForm = Depends()):
-    # OAuth2 form uses 'username' field; we treat it as email.
-    user = db.query(User).filter(User.email == form.username).first()
+    # OAuth2 form uses 'username' field. Members sign in with their phone
+    # number; admins/staff with their email. Accept either identifier.
+    ident = (form.username or "").strip()
+    user = (
+        db.query(User)
+        .filter((User.email == ident) | (User.phone == ident))
+        .first()
+    )
     if not user or not verify_password(form.password, user.password_hash):
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Incorrect email or password",
+            detail="Incorrect phone number / email or password",
         )
     if not user.is_active:
         raise HTTPException(

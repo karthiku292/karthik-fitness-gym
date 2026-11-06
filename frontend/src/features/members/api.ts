@@ -41,8 +41,8 @@ export async function deactivateMember(id: number): Promise<Member> {
 
 export async function setMemberCredentials(
   id: number,
-  email: string,
+  phone: string,
   password: string
 ): Promise<void> {
-  await api.post(`/members/${id}/credentials`, { email, password });
+  await api.post(`/members/${id}/credentials`, { phone, password });
 }

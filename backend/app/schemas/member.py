@@ -50,6 +50,6 @@ class MemberOut(MemberBase):
 
 
 class MemberCredentialsIn(BaseModel):
-    """Admin sets or resets a member's portal login."""
-    email: EmailStr
+    """Admin sets or resets a member's portal login (by phone number)."""
+    phone: str = Field(min_length=4, max_length=30)
     password: str = Field(min_length=8)

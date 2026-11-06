@@ -47,7 +47,7 @@ export function MembersPage() {
 
   // Portal-access (member login) modal
   const [credMember, setCredMember] = useState<Member | null>(null);
-  const [credEmail, setCredEmail] = useState("");
+  const [credPhone, setCredPhone] = useState("");
   const [credPassword, setCredPassword] = useState("");
   const [credSaving, setCredSaving] = useState(false);
   const [credError, setCredError] = useState<string | null>(null);
@@ -140,7 +140,7 @@ export function MembersPage() {
 
   function openAccess(m: Member) {
     setCredMember(m);
-    setCredEmail(m.email ?? "");
+    setCredPhone(m.phone ?? "");
     setCredPassword("");
     setCredError(null);
     setCredDone(false);
@@ -152,7 +152,7 @@ export function MembersPage() {
     setCredSaving(true);
     setCredError(null);
     try {
-      await setMemberCredentials(credMember.id, credEmail, credPassword);
+      await setMemberCredentials(credMember.id, credPhone, credPassword);
       setCredDone(true);
       await load();
     } catch (err) {
@@ -330,7 +330,7 @@ export function MembersPage() {
         {credDone ? (
           <div className="space-y-4">
             <p className="rounded-lg bg-success/10 px-3 py-2 text-sm text-success">
-              Login saved for {credMember?.name}. They can sign in at the login page with this email and password.
+              Login saved for {credMember?.name}. They sign in at the login page with their phone number and this password.
             </p>
             <div className="flex justify-end">
               <Button onClick={() => setCredMember(null)}>Done</Button>
@@ -339,15 +339,17 @@ export function MembersPage() {
         ) : (
           <form onSubmit={onSaveCredentials} className="space-y-4">
             <p className="text-sm text-muted">
-              Set a login for <span className="font-medium text-white">{credMember?.name}</span>. They'll sign in at the
-              normal login page and land on their member portal (not the admin area).
+              Set a login for <span className="font-medium text-white">{credMember?.name}</span>. They'll sign in with
+              their <span className="font-medium text-white">phone number</span> at the normal login page and land on
+              their member portal (not the admin area).
             </p>
             <Input
-              label="Login email"
-              type="email"
-              value={credEmail}
-              onChange={(e) => setCredEmail(e.target.value)}
+              label="Login phone number"
+              type="tel"
+              value={credPhone}
+              onChange={(e) => setCredPhone(e.target.value)}
               required
+              placeholder="e.g. 9876543210"
             />
             <Input
               label="Password (min 8 chars)"

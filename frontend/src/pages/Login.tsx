@@ -11,7 +11,7 @@ export function LoginPage() {
   const navigate = useNavigate();
   const login = useAuthStore((s) => s.login);
   const b = useBranding();
-  const [email, setEmail] = useState("");
+  const [identifier, setIdentifier] = useState("");
   const [password, setPassword] = useState("");
   const [showPw, setShowPw] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -22,11 +22,11 @@ export function LoginPage() {
     setError(null);
     setLoading(true);
     try {
-      await login(email, password);
+      await login(identifier, password);
       const role = useAuthStore.getState().user?.role;
       navigate(role === "member" ? "/portal" : "/app");
     } catch (err) {
-      setError(apiErrorMessage(err, "Invalid email or password"));
+      setError(apiErrorMessage(err, "Invalid phone number or password"));
     } finally {
       setLoading(false);
     }
@@ -66,14 +66,14 @@ export function LoginPage() {
         <Card className="space-y-4">
           <form onSubmit={onSubmit} className="space-y-4">
             <Input
-              id="email"
-              type="email"
-              label="Email"
-              placeholder="you@example.com"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              id="identifier"
+              type="text"
+              label="Phone number"
+              placeholder="Your phone number"
+              value={identifier}
+              onChange={(e) => setIdentifier(e.target.value)}
               required
-              autoComplete="email"
+              autoComplete="username"
             />
             <div className="relative">
               <Input
@@ -103,6 +103,9 @@ export function LoginPage() {
             <Button type="submit" loading={loading} className="w-full">
               Sign In
             </Button>
+            <p className="text-center text-xs text-muted">
+              Members sign in with their phone number. Gym admin can use their email.
+            </p>
           </form>
         </Card>
 
