@@ -1,0 +1,14 @@
+HOW TO SET YOUR OWN BACKGROUND IMAGE
+====================================
+
+1. Save your gym photo into THIS folder (frontend/public/).
+2. Name it exactly:  hero-bg.jpg
+   (a .jpg file — if yours is .png, you can still name it hero-bg.jpg,
+    but a .jpg keeps the site fast)
+3. Commit + redeploy on the server.
+
+The homepage and login screen will then use your photo as the full-screen
+background automatically. If this file is missing, a default dark gym image
+is shown instead.
+
+Recommended size: 1600x1000 pixels or larger, landscape.

@@ -32,11 +32,19 @@ export function HomePage() {
       {/* ---------------- Hero ---------------- */}
       <section className="relative flex min-h-screen items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src={IMAGES.hero} alt="" className="h-full w-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-r from-base via-base/90 to-base/40" />
-          <div className="absolute inset-0 bg-gradient-to-t from-base via-transparent to-base/60" />
+          {/* Prefers your own photo at frontend/public/hero-bg.jpg; falls back
+              to a dark gym image if that file is not present. */}
+          <div
+            className="h-full w-full bg-cover bg-center"
+            style={{ backgroundImage: `url('/hero-bg.jpg'), url('${IMAGES.hero}')` }}
+          />
+          {/* Moody darkening so the lavender branding and text pop. */}
+          <div className="absolute inset-0 bg-gradient-to-r from-base via-base/85 to-base/50" />
+          <div className="absolute inset-0 bg-gradient-to-t from-base via-base/30 to-base/70" />
         </div>
-        <div className="pointer-events-none absolute -right-24 top-1/3 h-96 w-96 rounded-full bg-brand/20 blur-[140px]" />
+        {/* Lavender neon glows echoing the reference lighting. */}
+        <div className="pointer-events-none absolute -right-24 top-1/3 h-96 w-96 rounded-full bg-brand/25 blur-[140px]" />
+        <div className="pointer-events-none absolute -left-24 bottom-1/4 h-80 w-80 rounded-full bg-brand/15 blur-[130px]" />
 
         <Container className="relative z-10 pt-24">
           <div className="max-w-2xl">
