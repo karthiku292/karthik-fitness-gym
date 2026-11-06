@@ -7,10 +7,12 @@ from sqlalchemy import select
 
 from app.core.deps import CurrentUser, DbSession
 from app.models.attendance import Attendance
+from app.models.fitness import DietAssignment, DietPlan, WorkoutAssignment, WorkoutPlan
 from app.models.member import Member
 from app.models.membership import Membership, MembershipPlan
 from app.models.payment import Payment
 from app.models.enums import MembershipStatus
+from app.schemas.fitness import PlanOut
 from app.schemas.member import MemberOut
 from app.schemas.payment import PaymentOut
 from app.schemas.portal import PortalAttendance, PortalMembership
@@ -83,3 +85,37 @@ def my_attendance(db: DbSession, current_user: CurrentUser):
             .limit(60)
         ).all()
     )
+
+
+@router.get("/workout", response_model=PlanOut | None)
+def my_workout(db: DbSession, current_user: CurrentUser):
+    member = _member(db, current_user)
+    a = db.scalar(
+        select(WorkoutAssignment)
+        .where(WorkoutAssignment.member_id == member.id, WorkoutAssignment.status == "active")
+        .order_by(WorkoutAssignment.id.desc())
+    )
+    if a is None:
+        return None
+    p = db.get(WorkoutPlan, a.plan_id)
+    if p is None:
+        return None
+    text = (p.schedule or {}).get("text") if isinstance(p.schedule, dict) else None
+    return PlanOut(id=p.id, gym_id=p.gym_id, name=p.name, description=p.description, details=text)
+
+
+@router.get("/diet", response_model=PlanOut | None)
+def my_diet(db: DbSession, current_user: CurrentUser):
+    member = _member(db, current_user)
+    a = db.scalar(
+        select(DietAssignment)
+        .where(DietAssignment.member_id == member.id, DietAssignment.status == "active")
+        .order_by(DietAssignment.id.desc())
+    )
+    if a is None:
+        return None
+    p = db.get(DietPlan, a.plan_id)
+    if p is None:
+        return None
+    text = p.meals.get("text") if isinstance(p.meals, dict) else None
+    return PlanOut(id=p.id, gym_id=p.gym_id, name=p.name, description=p.description, details=text)

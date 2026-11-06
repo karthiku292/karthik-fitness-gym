@@ -4,6 +4,7 @@ from fastapi import APIRouter
 from app.api.v1.routers import (
     auth,
     branches,
+    fitness,
     members,
     memberships,
     payments,
@@ -23,6 +24,7 @@ api_router.include_router(memberships.router)
 api_router.include_router(payments.router)
 api_router.include_router(portal.router)
 api_router.include_router(trainers.router)
+api_router.include_router(fitness.router)
 
 # Future phases register their routers here:
-# attendance, workouts, diets, reports, notifications, ai
+# attendance, reports, notifications, ai

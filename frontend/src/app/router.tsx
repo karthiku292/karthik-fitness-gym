@@ -25,6 +25,8 @@ import { TrainersAdminPage } from "@/pages/Trainers";
 import { PlansPage } from "@/pages/Plans";
 import { RenewalsPage } from "@/pages/Renewals";
 import { PaymentsPage } from "@/pages/Payments";
+import { WorkoutsPage } from "@/pages/Workouts";
+import { DietsPage } from "@/pages/Diets";
 import { Placeholder } from "@/pages/Placeholder";
 
 export const router = createBrowserRouter([
@@ -75,8 +77,8 @@ export const router = createBrowserRouter([
       { path: "attendance", element: <Placeholder title="Attendance History" phase="Phase 4" /> },
       { path: "scanner", element: <Placeholder title="QR Scanner" phase="Phase 4" /> },
       { path: "trainers", element: <TrainersAdminPage /> },
-      { path: "workouts", element: <Placeholder title="Workout Management" phase="Phase 5" /> },
-      { path: "diets", element: <Placeholder title="Diet Management" phase="Phase 5" /> },
+      { path: "workouts", element: <WorkoutsPage /> },
+      { path: "diets", element: <DietsPage /> },
       { path: "reports", element: <Placeholder title="Reports & Analytics" phase="Phase 6" /> },
       { path: "notifications", element: <Placeholder title="Notifications" phase="Phase 7" /> },
       { path: "assistant", element: <Placeholder title="AI Business Assistant" phase="Phase 8" /> },

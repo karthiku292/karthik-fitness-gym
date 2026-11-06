@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { CalendarClock, CreditCard, Dumbbell, CalendarCheck, User as UserIcon } from "lucide-react";
+import { CalendarClock, CreditCard, Dumbbell, Salad, CalendarCheck, User as UserIcon } from "lucide-react";
 import { Badge, Card, EmptyState, ErrorState, Skeleton } from "@/components/ui";
 import { apiErrorMessage } from "@/lib/api";
 import type { Member } from "@/lib/types";
@@ -8,6 +8,7 @@ import {
   PortalAttendance, PortalMembership,
   getMyAttendance, getMyMembership, getMyPayments, getMyProfile,
 } from "@/features/portal/api";
+import { Plan, getMyWorkout, getMyDiet } from "@/features/fitness/api";
 
 const inr = (n: number) => "₹" + Number(n).toLocaleString("en-IN");
 
@@ -16,6 +17,8 @@ export function MemberPortalPage() {
   const [membership, setMembership] = useState<PortalMembership | null>(null);
   const [payments, setPayments] = useState<Payment[]>([]);
   const [attendance, setAttendance] = useState<PortalAttendance[]>([]);
+  const [workout, setWorkout] = useState<Plan | null>(null);
+  const [diet, setDiet] = useState<Plan | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -23,16 +26,20 @@ export function MemberPortalPage() {
     setLoading(true);
     setError(null);
     try {
-      const [p, m, pay, att] = await Promise.all([
+      const [p, m, pay, att, wo, dt] = await Promise.all([
         getMyProfile(),
         getMyMembership(),
         getMyPayments(),
         getMyAttendance(),
+        getMyWorkout(),
+        getMyDiet(),
       ]);
       setProfile(p);
       setMembership(m);
       setPayments(pay);
       setAttendance(att);
+      setWorkout(wo);
+      setDiet(dt);
     } catch (e) {
       setError(apiErrorMessage(e, "Could not load your details"));
     } finally {
@@ -102,6 +109,40 @@ export function MemberPortalPage() {
           <EmptyState title="No active membership" hint="Contact the gym to activate or renew your plan." />
         )}
       </Card>
+
+      {/* Workout & Diet plans */}
+      <div className="grid gap-6 lg:grid-cols-2">
+        <Card>
+          <div className="mb-4 flex items-center gap-2 text-brand">
+            <Dumbbell className="h-5 w-5" />
+            <h2 className="font-display text-lg font-semibold uppercase">My Workout Plan</h2>
+          </div>
+          {workout ? (
+            <div>
+              <p className="font-semibold">{workout.name}</p>
+              {workout.description && <p className="text-sm text-muted">{workout.description}</p>}
+              {workout.details && <pre className="mt-3 whitespace-pre-wrap font-sans text-sm text-white/85">{workout.details}</pre>}
+            </div>
+          ) : (
+            <EmptyState title="No workout plan yet" hint="Your trainer will assign one soon." />
+          )}
+        </Card>
+        <Card>
+          <div className="mb-4 flex items-center gap-2 text-brand">
+            <Salad className="h-5 w-5" />
+            <h2 className="font-display text-lg font-semibold uppercase">My Diet Plan</h2>
+          </div>
+          {diet ? (
+            <div>
+              <p className="font-semibold">{diet.name}</p>
+              {diet.description && <p className="text-sm text-muted">{diet.description}</p>}
+              {diet.details && <pre className="mt-3 whitespace-pre-wrap font-sans text-sm text-white/85">{diet.details}</pre>}
+            </div>
+          ) : (
+            <EmptyState title="No diet plan yet" hint="Your trainer will assign one soon." />
+          )}
+        </Card>
+      </div>
 
       <div className="grid gap-6 lg:grid-cols-2">
         {/* Payments */}
