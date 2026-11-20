@@ -16,10 +16,12 @@ export function AppLayout() {
   if (user.role === "member") return <Navigate to="/portal" replace />;
 
   return (
-    <div className="min-h-screen bg-base">
+    <div className="relative min-h-screen bg-base">
+      <div className="fixed inset-0 z-0 bg-cover bg-center" style={{ backgroundImage: "url('/hero-bg.jpg'), url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1600&q=80')" }} />
+      <div className="fixed inset-0 z-0 bg-base/80" />
       <Sidebar role={user.role} gymName={b.short} logoUrl={b.logoUrl} open={open} />
 
-      <div className="lg:pl-64">
+      <div className="relative z-10 lg:pl-64">
         <header className="sticky top-0 z-30 flex items-center gap-3 border-b border-border bg-base/80 px-4 py-3 backdrop-blur">
           <button
             onClick={() => setOpen((v) => !v)}
