@@ -16,6 +16,12 @@ export interface Tokens {
   token_type: string;
 }
 
+export interface OtpRequestResponse {
+  sent: boolean;
+  dev_code?: string | null;
+  retry_after?: number | null;
+}
+
 export interface GymBranding {
   id: number;
   name: string;

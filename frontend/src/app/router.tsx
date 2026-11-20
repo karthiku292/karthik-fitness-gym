@@ -27,7 +27,11 @@ import { RenewalsPage } from "@/pages/Renewals";
 import { PaymentsPage } from "@/pages/Payments";
 import { WorkoutsPage } from "@/pages/Workouts";
 import { DietsPage } from "@/pages/Diets";
-import { Placeholder } from "@/pages/Placeholder";
+import { AttendanceHistoryPage } from "@/pages/AttendanceHistory";
+import { ScannerPage } from "@/pages/Scanner";
+import { ReportsPage } from "@/pages/Reports";
+import { NotificationsPage } from "@/pages/Notifications";
+import { AssistantPage } from "@/pages/Assistant";
 
 export const router = createBrowserRouter([
   // Public site
@@ -74,14 +78,14 @@ export const router = createBrowserRouter([
       { path: "plans", element: <PlansPage /> },
       { path: "renewals", element: <RenewalsPage /> },
       { path: "payments", element: <PaymentsPage /> },
-      { path: "attendance", element: <Placeholder title="Attendance History" phase="Phase 4" /> },
-      { path: "scanner", element: <Placeholder title="QR Scanner" phase="Phase 4" /> },
+      { path: "attendance", element: <AttendanceHistoryPage /> },
+      { path: "scanner", element: <ScannerPage /> },
       { path: "trainers", element: <TrainersAdminPage /> },
       { path: "workouts", element: <WorkoutsPage /> },
       { path: "diets", element: <DietsPage /> },
-      { path: "reports", element: <Placeholder title="Reports & Analytics" phase="Phase 6" /> },
-      { path: "notifications", element: <Placeholder title="Notifications" phase="Phase 7" /> },
-      { path: "assistant", element: <Placeholder title="AI Business Assistant" phase="Phase 8" /> },
+      { path: "reports", element: <ReportsPage /> },
+      { path: "notifications", element: <NotificationsPage /> },
+      { path: "assistant", element: <AssistantPage /> },
       { path: "settings", element: <SettingsPage /> },
     ],
   },

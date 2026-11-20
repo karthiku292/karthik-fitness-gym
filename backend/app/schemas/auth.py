@@ -45,3 +45,21 @@ class PasswordResetConfirm(BaseModel):
 class ChangePasswordRequest(BaseModel):
     current_password: str
     new_password: str = Field(min_length=8)
+
+
+# --- Member OTP login (passwordless) ---
+
+
+class OtpRequestIn(BaseModel):
+    phone: str = Field(min_length=3, max_length=32)
+
+
+class OtpRequestOut(BaseModel):
+    sent: bool
+    dev_code: Optional[str] = None  # only in dev + unconfigured provider
+    retry_after: Optional[int] = None  # populated in the 429 rate-limit body
+
+
+class OtpVerifyIn(BaseModel):
+    phone: str = Field(min_length=3, max_length=32)
+    code: str = Field(min_length=4, max_length=10)

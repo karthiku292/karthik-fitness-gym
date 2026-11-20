@@ -16,6 +16,7 @@ from app.models.fitness import (
 )
 from app.models.notification import Notification, NotificationTemplate
 from app.models.audit import AuditLog
+from app.models.otp import OtpCode
 
 __all__ = [
     "Gym",
@@ -37,4 +38,5 @@ __all__ = [
     "Notification",
     "NotificationTemplate",
     "AuditLog",
+    "OtpCode",
 ]

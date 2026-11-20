@@ -1,0 +1,323 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1.1 Create attendance Pydantic schemas": [
+      {
+        "executionId": "e5d14bd8-09a6-45a8-9842-78d4159d533a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1794999651698
+      },
+      {
+        "executionId": "e5d14bd8-09a6-45a8-9842-78d4159d533a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1794999672753
+      },
+      {
+        "executionId": "e5d14bd8-09a6-45a8-9842-78d4159d533a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1794999824984
+      }
+    ],
+    "1.2 Verify data model reuse and migration safety": [
+      {
+        "executionId": "e5d14bd8-09a6-45a8-9842-78d4159d533a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1794999651874
+      },
+      {
+        "executionId": "e5d14bd8-09a6-45a8-9842-78d4159d533a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1794999673791
+      },
+      {
+        "executionId": "e5d14bd8-09a6-45a8-9842-78d4159d533a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1794999825938
+      }
+    ],
+    "2.1 Implement the attendance service module": [
+      {
+        "executionId": "e5d14bd8-09a6-45a8-9842-78d4159d533a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1794999651954
+      },
+      {
+        "executionId": "e5d14bd8-09a6-45a8-9842-78d4159d533a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1794999835713
+      },
+      {
+        "executionId": "e5d14bd8-09a6-45a8-9842-78d4159d533a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795000029551
+      }
+    ],
+    "3.1 Implement the attendance router": [
+      {
+        "executionId": "e5d14bd8-09a6-45a8-9842-78d4159d533a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1794999652099
+      },
+      {
+        "executionId": "e5d14bd8-09a6-45a8-9842-78d4159d533a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795000041625
+      },
+      {
+        "executionId": "e5d14bd8-09a6-45a8-9842-78d4159d533a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795003867851
+      }
+    ],
+    "4.1 Add member-self QR endpoints to the portal router": [
+      {
+        "executionId": "e5d14bd8-09a6-45a8-9842-78d4159d533a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1794999652153
+      },
+      {
+        "executionId": "e5d14bd8-09a6-45a8-9842-78d4159d533a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795000042470
+      },
+      {
+        "executionId": "e5d14bd8-09a6-45a8-9842-78d4159d533a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795003868791
+      }
+    ],
+    "4.2 Register the attendance router under the v1 API": [
+      {
+        "executionId": "e5d14bd8-09a6-45a8-9842-78d4159d533a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1794999652206
+      },
+      {
+        "executionId": "e5d14bd8-09a6-45a8-9842-78d4159d533a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795003880488
+      },
+      {
+        "executionId": "e5d14bd8-09a6-45a8-9842-78d4159d533a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795004206149
+      }
+    ],
+    "5. Checkpoint — backend": [
+      {
+        "executionId": "e5d14bd8-09a6-45a8-9842-78d4159d533a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1794999652258
+      },
+      {
+        "executionId": "6e600153-ab2d-4d14-90d0-1f9d00410b7a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795066605663
+      }
+    ],
+    "6.1 Add runtime and test dependencies": [
+      {
+        "executionId": "e5d14bd8-09a6-45a8-9842-78d4159d533a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1794999652351
+      },
+      {
+        "executionId": "e5d14bd8-09a6-45a8-9842-78d4159d533a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795000043116
+      },
+      {
+        "executionId": "e5d14bd8-09a6-45a8-9842-78d4159d533a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795003869647
+      }
+    ],
+    "7.1 Create the attendance feature API module": [
+      {
+        "executionId": "e5d14bd8-09a6-45a8-9842-78d4159d533a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1794999652399
+      },
+      {
+        "executionId": "e5d14bd8-09a6-45a8-9842-78d4159d533a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795003881220
+      },
+      {
+        "executionId": "e5d14bd8-09a6-45a8-9842-78d4159d533a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795004206272
+      }
+    ],
+    "8.1 Build the Attendance History page and wire its route": [
+      {
+        "executionId": "e5d14bd8-09a6-45a8-9842-78d4159d533a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1794999652451
+      },
+      {
+        "executionId": "e5d14bd8-09a6-45a8-9842-78d4159d533a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795004226720
+      },
+      {
+        "executionId": "6e600153-ab2d-4d14-90d0-1f9d00410b7a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795065031428
+      }
+    ],
+    "9.1 Build the QR Scanner page and wire its route": [
+      {
+        "executionId": "e5d14bd8-09a6-45a8-9842-78d4159d533a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1794999652503
+      },
+      {
+        "executionId": "6e600153-ab2d-4d14-90d0-1f9d00410b7a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795065042188
+      },
+      {
+        "executionId": "6e600153-ab2d-4d14-90d0-1f9d00410b7a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795065140750
+      },
+      {
+        "executionId": "6e600153-ab2d-4d14-90d0-1f9d00410b7a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795065149563
+      },
+      {
+        "executionId": "6e600153-ab2d-4d14-90d0-1f9d00410b7a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795065259720
+      },
+      {
+        "executionId": "6e600153-ab2d-4d14-90d0-1f9d00410b7a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795065268135
+      },
+      {
+        "executionId": "6e600153-ab2d-4d14-90d0-1f9d00410b7a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795066472442
+      }
+    ],
+    "10.1 Add the \"My QR Code\" card to the member portal": [
+      {
+        "executionId": "e5d14bd8-09a6-45a8-9842-78d4159d533a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1794999652553
+      },
+      {
+        "executionId": "e5d14bd8-09a6-45a8-9842-78d4159d533a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795004228100
+      },
+      {
+        "executionId": "6e600153-ab2d-4d14-90d0-1f9d00410b7a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795065032261
+      }
+    ],
+    "11.1 Wire the \"Today's Attendance\" KPI": [
+      {
+        "executionId": "e5d14bd8-09a6-45a8-9842-78d4159d533a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1794999652602
+      },
+      {
+        "executionId": "e5d14bd8-09a6-45a8-9842-78d4159d533a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795004228853
+      },
+      {
+        "executionId": "6e600153-ab2d-4d14-90d0-1f9d00410b7a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795065033415
+      }
+    ],
+    "12. Checkpoint — final": [
+      {
+        "executionId": "e5d14bd8-09a6-45a8-9842-78d4159d533a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1794999652649
+      },
+      {
+        "executionId": "6e600153-ab2d-4d14-90d0-1f9d00410b7a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795066738056
+      }
+    ],
+    "1. Backend attendance schemas, migration safety, and test harness": [
+      {
+        "executionId": "e5d14bd8-09a6-45a8-9842-78d4159d533a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1794999825995
+      }
+    ],
+    "2. Backend attendance service": [
+      {
+        "executionId": "e5d14bd8-09a6-45a8-9842-78d4159d533a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795000029615
+      }
+    ],
+    "3. Backend attendance router": [
+      {
+        "executionId": "e5d14bd8-09a6-45a8-9842-78d4159d533a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795003867928
+      }
+    ],
+    "6. Frontend dependencies and test tooling": [
+      {
+        "executionId": "e5d14bd8-09a6-45a8-9842-78d4159d533a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795003869721
+      }
+    ],
+    "4. Backend portal QR endpoints and router registration": [
+      {
+        "executionId": "e5d14bd8-09a6-45a8-9842-78d4159d533a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795004206206
+      }
+    ],
+    "7. Frontend attendance API layer": [
+      {
+        "executionId": "e5d14bd8-09a6-45a8-9842-78d4159d533a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795004206333
+      }
+    ],
+    "8. Frontend Attendance History page": [
+      {
+        "executionId": "6e600153-ab2d-4d14-90d0-1f9d00410b7a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795065031608
+      }
+    ],
+    "10. Frontend member-portal QR display": [
+      {
+        "executionId": "6e600153-ab2d-4d14-90d0-1f9d00410b7a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795065032346
+      }
+    ],
+    "11. Frontend dashboard KPI wiring": [
+      {
+        "executionId": "6e600153-ab2d-4d14-90d0-1f9d00410b7a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795065033468
+      }
+    ],
+    "9. Frontend QR Scanner page": [
+      {
+        "executionId": "6e600153-ab2d-4d14-90d0-1f9d00410b7a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795066472515
+      }
+    ]
+  }
+}

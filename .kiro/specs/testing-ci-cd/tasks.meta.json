@@ -1,0 +1,266 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1.1 Build the Test_Application, Test_Database, and shared fixtures in `backend/tests/conftest.py`": [
+      {
+        "executionId": "6183eda5-9aa6-4dcd-a2af-41f5f37bbf53",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795154061587
+      },
+      {
+        "executionId": "6183eda5-9aa6-4dcd-a2af-41f5f37bbf53",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795154073640
+      },
+      {
+        "executionId": "6183eda5-9aa6-4dcd-a2af-41f5f37bbf53",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795154116014
+      },
+      {
+        "executionId": "6183eda5-9aa6-4dcd-a2af-41f5f37bbf53",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795154122254
+      },
+      {
+        "executionId": "6183eda5-9aa6-4dcd-a2af-41f5f37bbf53",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795154161146
+      },
+      {
+        "executionId": "6183eda5-9aa6-4dcd-a2af-41f5f37bbf53",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795154169295
+      },
+      {
+        "executionId": "6183eda5-9aa6-4dcd-a2af-41f5f37bbf53",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795154493901
+      }
+    ],
+    "2.1 Create `backend/tests/test_health.py`": [
+      {
+        "executionId": "6183eda5-9aa6-4dcd-a2af-41f5f37bbf53",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795154061761
+      },
+      {
+        "executionId": "6183eda5-9aa6-4dcd-a2af-41f5f37bbf53",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795154503940
+      },
+      {
+        "executionId": "6183eda5-9aa6-4dcd-a2af-41f5f37bbf53",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795154684812
+      }
+    ],
+    "2.2 Create `backend/tests/test_auth.py`": [
+      {
+        "executionId": "6183eda5-9aa6-4dcd-a2af-41f5f37bbf53",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795154061843
+      },
+      {
+        "executionId": "6183eda5-9aa6-4dcd-a2af-41f5f37bbf53",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795154504887
+      },
+      {
+        "executionId": "6183eda5-9aa6-4dcd-a2af-41f5f37bbf53",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795154686215
+      }
+    ],
+    "2.3 Create `backend/tests/test_rbac.py`": [
+      {
+        "executionId": "6183eda5-9aa6-4dcd-a2af-41f5f37bbf53",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795154061995
+      },
+      {
+        "executionId": "6183eda5-9aa6-4dcd-a2af-41f5f37bbf53",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795154506337
+      },
+      {
+        "executionId": "6183eda5-9aa6-4dcd-a2af-41f5f37bbf53",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795154687167
+      }
+    ],
+    "2.4 Create `backend/tests/test_members.py`": [
+      {
+        "executionId": "6183eda5-9aa6-4dcd-a2af-41f5f37bbf53",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795154062065
+      },
+      {
+        "executionId": "6183eda5-9aa6-4dcd-a2af-41f5f37bbf53",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795154507228
+      },
+      {
+        "executionId": "6183eda5-9aa6-4dcd-a2af-41f5f37bbf53",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795154688570
+      }
+    ],
+    "2.5 Create `backend/tests/test_smoke_endpoints.py`": [
+      {
+        "executionId": "6183eda5-9aa6-4dcd-a2af-41f5f37bbf53",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795154062130
+      },
+      {
+        "executionId": "6183eda5-9aa6-4dcd-a2af-41f5f37bbf53",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795154508352
+      },
+      {
+        "executionId": "6183eda5-9aa6-4dcd-a2af-41f5f37bbf53",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795154689321
+      }
+    ],
+    "3.1 Run the suite from `backend/` and fix failures until green": [
+      {
+        "executionId": "6183eda5-9aa6-4dcd-a2af-41f5f37bbf53",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795154062192
+      },
+      {
+        "executionId": "6183eda5-9aa6-4dcd-a2af-41f5f37bbf53",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795154712757
+      },
+      {
+        "executionId": "6183eda5-9aa6-4dcd-a2af-41f5f37bbf53",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795155026913
+      }
+    ],
+    "4.1 Create `.github/workflows/ci.yml` with the backend and frontend jobs": [
+      {
+        "executionId": "6183eda5-9aa6-4dcd-a2af-41f5f37bbf53",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795154062244
+      },
+      {
+        "executionId": "6183eda5-9aa6-4dcd-a2af-41f5f37bbf53",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795155037443
+      },
+      {
+        "executionId": "6183eda5-9aa6-4dcd-a2af-41f5f37bbf53",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795155168926
+      }
+    ],
+    "5.1 Create `docs/README.md`": [
+      {
+        "executionId": "6183eda5-9aa6-4dcd-a2af-41f5f37bbf53",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795154062305
+      },
+      {
+        "executionId": "6183eda5-9aa6-4dcd-a2af-41f5f37bbf53",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795155176067
+      },
+      {
+        "executionId": "6183eda5-9aa6-4dcd-a2af-41f5f37bbf53",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795155464266
+      }
+    ],
+    "5.2 Create `docs/development.md`": [
+      {
+        "executionId": "6183eda5-9aa6-4dcd-a2af-41f5f37bbf53",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795154062364
+      },
+      {
+        "executionId": "6183eda5-9aa6-4dcd-a2af-41f5f37bbf53",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795155177009
+      },
+      {
+        "executionId": "6183eda5-9aa6-4dcd-a2af-41f5f37bbf53",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795155465212
+      }
+    ],
+    "5.3 Create `docs/usage.md`": [
+      {
+        "executionId": "6183eda5-9aa6-4dcd-a2af-41f5f37bbf53",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795154062421
+      },
+      {
+        "executionId": "6183eda5-9aa6-4dcd-a2af-41f5f37bbf53",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795155177931
+      },
+      {
+        "executionId": "6183eda5-9aa6-4dcd-a2af-41f5f37bbf53",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795155466266
+      }
+    ],
+    "6.1 Re-run the full backend suite and confirm it is green": [
+      {
+        "executionId": "6183eda5-9aa6-4dcd-a2af-41f5f37bbf53",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795154062474
+      },
+      {
+        "executionId": "6183eda5-9aa6-4dcd-a2af-41f5f37bbf53",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795155518569
+      }
+    ],
+    "1. Create the backend test harness": [
+      {
+        "executionId": "6183eda5-9aa6-4dcd-a2af-41f5f37bbf53",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795154493985
+      }
+    ],
+    "2. Write the backend test modules": [
+      {
+        "executionId": "6183eda5-9aa6-4dcd-a2af-41f5f37bbf53",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795154689380
+      }
+    ],
+    "3. Verify the backend suite locally": [
+      {
+        "executionId": "6183eda5-9aa6-4dcd-a2af-41f5f37bbf53",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795155026990
+      }
+    ],
+    "4. Add the continuous integration pipeline": [
+      {
+        "executionId": "6183eda5-9aa6-4dcd-a2af-41f5f37bbf53",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795155169005
+      }
+    ],
+    "5. Write the contributor documentation set": [
+      {
+        "executionId": "6183eda5-9aa6-4dcd-a2af-41f5f37bbf53",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795155466312
+      }
+    ],
+    "6. Final verification": [
+      {
+        "executionId": "6183eda5-9aa6-4dcd-a2af-41f5f37bbf53",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795155518627
+      }
+    ]
+  }
+}

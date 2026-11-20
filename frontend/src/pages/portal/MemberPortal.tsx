@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import { CalendarClock, CreditCard, Dumbbell, Salad, CalendarCheck, User as UserIcon } from "lucide-react";
-import { Badge, Card, EmptyState, ErrorState, Skeleton } from "@/components/ui";
+import { QRCodeSVG } from "qrcode.react";
+import { CalendarClock, CreditCard, Dumbbell, Salad, CalendarCheck, QrCode, User as UserIcon } from "lucide-react";
+import { Badge, Button, Card, EmptyState, ErrorState, Skeleton } from "@/components/ui";
 import { apiErrorMessage } from "@/lib/api";
 import type { Member } from "@/lib/types";
 import type { Payment } from "@/features/payments/api";
@@ -9,6 +10,7 @@ import {
   getMyAttendance, getMyMembership, getMyPayments, getMyProfile,
 } from "@/features/portal/api";
 import { Plan, getMyWorkout, getMyDiet } from "@/features/fitness/api";
+import { getMyQr, regenerateMyQr } from "@/features/attendance/api";
 
 const inr = (n: number) => "₹" + Number(n).toLocaleString("en-IN");
 
@@ -110,6 +112,9 @@ export function MemberPortalPage() {
         )}
       </Card>
 
+      {/* My QR Code */}
+      <MyQrCard />
+
       {/* Workout & Diet plans */}
       <div className="grid gap-6 lg:grid-cols-2">
         <Card>
@@ -189,6 +194,73 @@ export function MemberPortalPage() {
         </Card>
       </div>
     </div>
+  );
+}
+
+function MyQrCard() {
+  const [token, setToken] = useState<string | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [regenerating, setRegenerating] = useState(false);
+
+  async function loadQr() {
+    setLoading(true);
+    setError(null);
+    try {
+      const qr = await getMyQr();
+      setToken(qr.token);
+    } catch (e) {
+      setError(apiErrorMessage(e, "Could not load your QR code"));
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  useEffect(() => {
+    void loadQr();
+  }, []);
+
+  async function regenerate() {
+    setRegenerating(true);
+    setError(null);
+    try {
+      const qr = await regenerateMyQr();
+      setToken(qr.token);
+    } catch (e) {
+      // Keep the current (still valid) QR visible and surface the error inline.
+      setError(apiErrorMessage(e, "Could not regenerate your QR code"));
+    } finally {
+      setRegenerating(false);
+    }
+  }
+
+  return (
+    <Card>
+      <div className="mb-4 flex items-center gap-2 text-brand">
+        <QrCode className="h-5 w-5" />
+        <h2 className="font-display text-lg font-semibold uppercase">My QR Code</h2>
+      </div>
+      {loading ? (
+        <div className="flex justify-center py-6">
+          <Skeleton className="h-[232px] w-[232px]" />
+        </div>
+      ) : !token ? (
+        <ErrorState message={error ?? "Could not load your QR code"} onRetry={loadQr} />
+      ) : (
+        <div className="flex flex-col items-center gap-4">
+          <div className="rounded-2xl bg-white p-4">
+            <QRCodeSVG value={token} size={200} level="M" />
+          </div>
+          <p className="max-w-xs text-center text-sm text-muted">
+            Show this code to gym staff to check in. Regenerate it if you think it has been shared.
+          </p>
+          <Button variant="secondary" onClick={regenerate} loading={regenerating}>
+            Regenerate
+          </Button>
+          {error && <p className="text-xs text-danger">{error}</p>}
+        </div>
+      )}
+    </Card>
   );
 }
 

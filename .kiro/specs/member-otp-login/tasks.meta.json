@@ -1,0 +1,346 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1.1 Create the `OtpCode` ORM model": [
+      {
+        "executionId": "55564c5b-da47-4daf-807e-9b1b7052d506",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795164153324
+      },
+      {
+        "executionId": "55564c5b-da47-4daf-807e-9b1b7052d506",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795164168660
+      },
+      {
+        "executionId": "55564c5b-da47-4daf-807e-9b1b7052d506",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795164289495
+      },
+      {
+        "executionId": "55564c5b-da47-4daf-807e-9b1b7052d506",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795164301978
+      },
+      {
+        "executionId": "55564c5b-da47-4daf-807e-9b1b7052d506",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795164568566
+      }
+    ],
+    "1.2 Register `OtpCode` on the shared metadata": [
+      {
+        "executionId": "55564c5b-da47-4daf-807e-9b1b7052d506",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795164153478
+      },
+      {
+        "executionId": "55564c5b-da47-4daf-807e-9b1b7052d506",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795164586878
+      },
+      {
+        "executionId": "55564c5b-da47-4daf-807e-9b1b7052d506",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795164911258
+      }
+    ],
+    "2.1 Create the chained `0003_otp_codes` migration": [
+      {
+        "executionId": "55564c5b-da47-4daf-807e-9b1b7052d506",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795164153545
+      },
+      {
+        "executionId": "55564c5b-da47-4daf-807e-9b1b7052d506",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795164587782
+      },
+      {
+        "executionId": "55564c5b-da47-4daf-807e-9b1b7052d506",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795164912604
+      }
+    ],
+    "2.2 Apply the migration and confirm the table exists": [
+      {
+        "executionId": "55564c5b-da47-4daf-807e-9b1b7052d506",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795164153690
+      },
+      {
+        "executionId": "55564c5b-da47-4daf-807e-9b1b7052d506",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795164933902
+      },
+      {
+        "executionId": "55564c5b-da47-4daf-807e-9b1b7052d506",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795165415709
+      }
+    ],
+    "3.1 Service foundation: constants, clock, typed errors, normalization, gym resolution": [
+      {
+        "executionId": "55564c5b-da47-4daf-807e-9b1b7052d506",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795164153742
+      },
+      {
+        "executionId": "55564c5b-da47-4daf-807e-9b1b7052d506",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795164589220
+      },
+      {
+        "executionId": "55564c5b-da47-4daf-807e-9b1b7052d506",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795164913561
+      }
+    ],
+    "3.2 Delivery seam (member-independent, injectable)": [
+      {
+        "executionId": "55564c5b-da47-4daf-807e-9b1b7052d506",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795164153797
+      },
+      {
+        "executionId": "55564c5b-da47-4daf-807e-9b1b7052d506",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795164934661
+      },
+      {
+        "executionId": "55564c5b-da47-4daf-807e-9b1b7052d506",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795165416600
+      }
+    ],
+    "3.3 `request_otp` and the per-phone rate-limit guard": [
+      {
+        "executionId": "55564c5b-da47-4daf-807e-9b1b7052d506",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795164153862
+      },
+      {
+        "executionId": "55564c5b-da47-4daf-807e-9b1b7052d506",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795165435880
+      },
+      {
+        "executionId": "55564c5b-da47-4daf-807e-9b1b7052d506",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795165942957
+      }
+    ],
+    "3.4 Account provisioning / resolution": [
+      {
+        "executionId": "55564c5b-da47-4daf-807e-9b1b7052d506",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795164153905
+      },
+      {
+        "executionId": "55564c5b-da47-4daf-807e-9b1b7052d506",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795165943988
+      },
+      {
+        "executionId": "55564c5b-da47-4daf-807e-9b1b7052d506",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795166301893
+      }
+    ],
+    "3.5 `verify_otp`": [
+      {
+        "executionId": "55564c5b-da47-4daf-807e-9b1b7052d506",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795164153950
+      },
+      {
+        "executionId": "55564c5b-da47-4daf-807e-9b1b7052d506",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795166302533
+      },
+      {
+        "executionId": "55564c5b-da47-4daf-807e-9b1b7052d506",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795166765030
+      }
+    ],
+    "4.1 Add the OTP Pydantic models": [
+      {
+        "executionId": "55564c5b-da47-4daf-807e-9b1b7052d506",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795164153994
+      },
+      {
+        "executionId": "55564c5b-da47-4daf-807e-9b1b7052d506",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795164201836
+      },
+      {
+        "executionId": "55564c5b-da47-4daf-807e-9b1b7052d506",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795164290203
+      },
+      {
+        "executionId": "55564c5b-da47-4daf-807e-9b1b7052d506",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795164303196
+      },
+      {
+        "executionId": "55564c5b-da47-4daf-807e-9b1b7052d506",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795164569883
+      }
+    ],
+    "5.1 Add the two routes and their test-overridable dependencies": [
+      {
+        "executionId": "55564c5b-da47-4daf-807e-9b1b7052d506",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795164154035
+      },
+      {
+        "executionId": "55564c5b-da47-4daf-807e-9b1b7052d506",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795166779666
+      },
+      {
+        "executionId": "55564c5b-da47-4daf-807e-9b1b7052d506",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795167050924
+      }
+    ],
+    "6. Backend checkpoint": [
+      {
+        "executionId": "55564c5b-da47-4daf-807e-9b1b7052d506",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795164154080
+      },
+      {
+        "executionId": "55564c5b-da47-4daf-807e-9b1b7052d506",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795167154244
+      }
+    ],
+    "7.1 Add the OTP response type": [
+      {
+        "executionId": "55564c5b-da47-4daf-807e-9b1b7052d506",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795164154124
+      },
+      {
+        "executionId": "55564c5b-da47-4daf-807e-9b1b7052d506",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795164202470
+      },
+      {
+        "executionId": "55564c5b-da47-4daf-807e-9b1b7052d506",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795164290850
+      },
+      {
+        "executionId": "55564c5b-da47-4daf-807e-9b1b7052d506",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795164303943
+      },
+      {
+        "executionId": "55564c5b-da47-4daf-807e-9b1b7052d506",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795164570583
+      }
+    ],
+    "7.2 Add `otpRequest` / `otpVerify` actions": [
+      {
+        "executionId": "55564c5b-da47-4daf-807e-9b1b7052d506",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795164154163
+      },
+      {
+        "executionId": "55564c5b-da47-4daf-807e-9b1b7052d506",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795164590097
+      },
+      {
+        "executionId": "55564c5b-da47-4daf-807e-9b1b7052d506",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795164914657
+      }
+    ],
+    "8.1 Make the login page mode-aware (member phone+OTP / staff email+password)": [
+      {
+        "executionId": "55564c5b-da47-4daf-807e-9b1b7052d506",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795164154203
+      },
+      {
+        "executionId": "55564c5b-da47-4daf-807e-9b1b7052d506",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795164935232
+      },
+      {
+        "executionId": "55564c5b-da47-4daf-807e-9b1b7052d506",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795165417593
+      }
+    ],
+    "9. Final checkpoint": [
+      {
+        "executionId": "55564c5b-da47-4daf-807e-9b1b7052d506",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795164154242
+      },
+      {
+        "executionId": "55564c5b-da47-4daf-807e-9b1b7052d506",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795167369650
+      }
+    ],
+    "4. OTP request/verify schemas (`app/schemas/auth.py`, additive)": [
+      {
+        "executionId": "55564c5b-da47-4daf-807e-9b1b7052d506",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795164569967
+      }
+    ],
+    "1. OTP persistence model and metadata registration": [
+      {
+        "executionId": "55564c5b-da47-4daf-807e-9b1b7052d506",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795164911345
+      }
+    ],
+    "7. Frontend auth store (`src/lib/types.ts`, `src/lib/auth.ts`, additive)": [
+      {
+        "executionId": "55564c5b-da47-4daf-807e-9b1b7052d506",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795164914718
+      }
+    ],
+    "2. Alembic migration for `otp_codes` and its application": [
+      {
+        "executionId": "55564c5b-da47-4daf-807e-9b1b7052d506",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795165415777
+      }
+    ],
+    "8. Frontend login page (`src/pages/Login.tsx`, rewrite)": [
+      {
+        "executionId": "55564c5b-da47-4daf-807e-9b1b7052d506",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795165417648
+      }
+    ],
+    "3. OTP service (`app/services/otp.py`)": [
+      {
+        "executionId": "55564c5b-da47-4daf-807e-9b1b7052d506",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795166765122
+      }
+    ],
+    "5. OTP endpoints (`app/api/v1/routers/auth.py`, additive)": [
+      {
+        "executionId": "55564c5b-da47-4daf-807e-9b1b7052d506",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795167051027
+      }
+    ]
+  }
+}

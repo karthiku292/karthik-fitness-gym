@@ -1,0 +1,316 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "2.1 Create `backend/app/schemas/report.py`": [
+      {
+        "executionId": "50a11b35-39de-4f18-b64c-8a5905bdce1e",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795069820656
+      },
+      {
+        "executionId": "50a11b35-39de-4f18-b64c-8a5905bdce1e",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795069842277
+      },
+      {
+        "executionId": "50a11b35-39de-4f18-b64c-8a5905bdce1e",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795070145806
+      }
+    ],
+    "3.1 Create `backend/app/services/report.py` with shared date helpers": [
+      {
+        "executionId": "50a11b35-39de-4f18-b64c-8a5905bdce1e",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795069820783
+      },
+      {
+        "executionId": "50a11b35-39de-4f18-b64c-8a5905bdce1e",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795069843606
+      },
+      {
+        "executionId": "50a11b35-39de-4f18-b64c-8a5905bdce1e",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795070146631
+      }
+    ],
+    "3.2 Implement `dashboard_summary(db, gym_id)`": [
+      {
+        "executionId": "50a11b35-39de-4f18-b64c-8a5905bdce1e",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795069820875
+      },
+      {
+        "executionId": "50a11b35-39de-4f18-b64c-8a5905bdce1e",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795070161295
+      },
+      {
+        "executionId": "50a11b35-39de-4f18-b64c-8a5905bdce1e",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795070814391
+      }
+    ],
+    "4.1 Implement `revenue_trend(db, gym_id)` in `services/report.py`": [
+      {
+        "executionId": "50a11b35-39de-4f18-b64c-8a5905bdce1e",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795069820980
+      },
+      {
+        "executionId": "50a11b35-39de-4f18-b64c-8a5905bdce1e",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795070834490
+      },
+      {
+        "executionId": "50a11b35-39de-4f18-b64c-8a5905bdce1e",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795071034592
+      }
+    ],
+    "4.3 Implement `signup_trend(db, gym_id)` in `services/report.py`": [
+      {
+        "executionId": "50a11b35-39de-4f18-b64c-8a5905bdce1e",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795069821078
+      },
+      {
+        "executionId": "50a11b35-39de-4f18-b64c-8a5905bdce1e",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795071043407
+      },
+      {
+        "executionId": "50a11b35-39de-4f18-b64c-8a5905bdce1e",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795071195985
+      }
+    ],
+    "4.5 Implement `attendance_trend(db, gym_id)` in `services/report.py`": [
+      {
+        "executionId": "50a11b35-39de-4f18-b64c-8a5905bdce1e",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795069821209
+      },
+      {
+        "executionId": "50a11b35-39de-4f18-b64c-8a5905bdce1e",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795071197124
+      },
+      {
+        "executionId": "50a11b35-39de-4f18-b64c-8a5905bdce1e",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795071309650
+      }
+    ],
+    "4.7 Implement `revenue_by_plan(db, gym_id)` in `services/report.py`": [
+      {
+        "executionId": "50a11b35-39de-4f18-b64c-8a5905bdce1e",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795069821306
+      },
+      {
+        "executionId": "50a11b35-39de-4f18-b64c-8a5905bdce1e",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795071310530
+      },
+      {
+        "executionId": "50a11b35-39de-4f18-b64c-8a5905bdce1e",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795071571122
+      }
+    ],
+    "5.1 Create `backend/app/api/v1/routers/reports.py`": [
+      {
+        "executionId": "50a11b35-39de-4f18-b64c-8a5905bdce1e",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795069821406
+      },
+      {
+        "executionId": "50a11b35-39de-4f18-b64c-8a5905bdce1e",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795071578265
+      },
+      {
+        "executionId": "50a11b35-39de-4f18-b64c-8a5905bdce1e",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795071714757
+      }
+    ],
+    "5.2 Register the reports router in `backend/app/api/v1/router.py`": [
+      {
+        "executionId": "50a11b35-39de-4f18-b64c-8a5905bdce1e",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795069821506
+      },
+      {
+        "executionId": "50a11b35-39de-4f18-b64c-8a5905bdce1e",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795071715731
+      },
+      {
+        "executionId": "50a11b35-39de-4f18-b64c-8a5905bdce1e",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795071887407
+      }
+    ],
+    "6. Backend checkpoint": [
+      {
+        "executionId": "50a11b35-39de-4f18-b64c-8a5905bdce1e",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795069821616
+      },
+      {
+        "executionId": "50a11b35-39de-4f18-b64c-8a5905bdce1e",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795071906593
+      }
+    ],
+    "7.1 Create `frontend/src/lib/currency.ts`": [
+      {
+        "executionId": "50a11b35-39de-4f18-b64c-8a5905bdce1e",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795069821717
+      },
+      {
+        "executionId": "50a11b35-39de-4f18-b64c-8a5905bdce1e",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795069844561
+      },
+      {
+        "executionId": "50a11b35-39de-4f18-b64c-8a5905bdce1e",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795070148092
+      }
+    ],
+    "7.2 Create `frontend/src/features/reports/api.ts`": [
+      {
+        "executionId": "50a11b35-39de-4f18-b64c-8a5905bdce1e",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795069821817
+      },
+      {
+        "executionId": "50a11b35-39de-4f18-b64c-8a5905bdce1e",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795069845483
+      },
+      {
+        "executionId": "50a11b35-39de-4f18-b64c-8a5905bdce1e",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795070148829
+      }
+    ],
+    "8.1 Update `frontend/src/pages/Dashboard.tsx`": [
+      {
+        "executionId": "50a11b35-39de-4f18-b64c-8a5905bdce1e",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795069821955
+      },
+      {
+        "executionId": "50a11b35-39de-4f18-b64c-8a5905bdce1e",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795070162247
+      },
+      {
+        "executionId": "50a11b35-39de-4f18-b64c-8a5905bdce1e",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795070815825
+      }
+    ],
+    "9.1 Create `frontend/src/pages/Reports.tsx`": [
+      {
+        "executionId": "50a11b35-39de-4f18-b64c-8a5905bdce1e",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795069822064
+      },
+      {
+        "executionId": "50a11b35-39de-4f18-b64c-8a5905bdce1e",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795070163281
+      },
+      {
+        "executionId": "50a11b35-39de-4f18-b64c-8a5905bdce1e",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795070816553
+      }
+    ],
+    "9.2 Mount `ReportsPage` in `frontend/src/app/router.tsx`": [
+      {
+        "executionId": "50a11b35-39de-4f18-b64c-8a5905bdce1e",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795069822157
+      },
+      {
+        "executionId": "50a11b35-39de-4f18-b64c-8a5905bdce1e",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795070835637
+      },
+      {
+        "executionId": "50a11b35-39de-4f18-b64c-8a5905bdce1e",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795071035370
+      }
+    ],
+    "10. Final checkpoint": [
+      {
+        "executionId": "50a11b35-39de-4f18-b64c-8a5905bdce1e",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795069822258
+      },
+      {
+        "executionId": "50a11b35-39de-4f18-b64c-8a5905bdce1e",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795072001040
+      }
+    ],
+    "2. Implement report response schemas": [
+      {
+        "executionId": "50a11b35-39de-4f18-b64c-8a5905bdce1e",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795070145919
+      }
+    ],
+    "7. Build the frontend data layer": [
+      {
+        "executionId": "50a11b35-39de-4f18-b64c-8a5905bdce1e",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795070148954
+      }
+    ],
+    "3. Implement the KPI summary aggregation": [
+      {
+        "executionId": "50a11b35-39de-4f18-b64c-8a5905bdce1e",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795070814498
+      }
+    ],
+    "8. Wire the Dashboard KPIs": [
+      {
+        "executionId": "50a11b35-39de-4f18-b64c-8a5905bdce1e",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795070815903
+      }
+    ],
+    "9. Build the Reports page and mount the route": [
+      {
+        "executionId": "50a11b35-39de-4f18-b64c-8a5905bdce1e",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795071035445
+      }
+    ],
+    "4. Implement the trend and breakdown aggregations": [
+      {
+        "executionId": "50a11b35-39de-4f18-b64c-8a5905bdce1e",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795071571232
+      }
+    ],
+    "5. Expose and register the reports router": [
+      {
+        "executionId": "50a11b35-39de-4f18-b64c-8a5905bdce1e",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795071887530
+      }
+    ]
+  }
+}

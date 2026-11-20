@@ -1,0 +1,227 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1.1 Implement assistant request/response schemas": [
+      {
+        "executionId": "31a7ef31-ff90-409c-a1f8-e2cdfa25c481",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795085524865
+      },
+      {
+        "executionId": "31a7ef31-ff90-409c-a1f8-e2cdfa25c481",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795085543297
+      },
+      {
+        "executionId": "31a7ef31-ff90-409c-a1f8-e2cdfa25c481",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795085751185
+      }
+    ],
+    "2.1 Create the service module, constants, config gate, and snapshot builder": [
+      {
+        "executionId": "31a7ef31-ff90-409c-a1f8-e2cdfa25c481",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795085524945
+      },
+      {
+        "executionId": "31a7ef31-ff90-409c-a1f8-e2cdfa25c481",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795085751438
+      },
+      {
+        "executionId": "31a7ef31-ff90-409c-a1f8-e2cdfa25c481",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795085926173
+      }
+    ],
+    "2.4 Implement the deterministic local summary": [
+      {
+        "executionId": "31a7ef31-ff90-409c-a1f8-e2cdfa25c481",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795085525003
+      },
+      {
+        "executionId": "31a7ef31-ff90-409c-a1f8-e2cdfa25c481",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795085926801
+      },
+      {
+        "executionId": "31a7ef31-ff90-409c-a1f8-e2cdfa25c481",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795086100018
+      }
+    ],
+    "2.7 Implement the injectable provider and prompt assembly": [
+      {
+        "executionId": "31a7ef31-ff90-409c-a1f8-e2cdfa25c481",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795085525064
+      },
+      {
+        "executionId": "31a7ef31-ff90-409c-a1f8-e2cdfa25c481",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795086100692
+      },
+      {
+        "executionId": "31a7ef31-ff90-409c-a1f8-e2cdfa25c481",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795086280533
+      }
+    ],
+    "2.9 Implement the `ask` entry point (routing + never-raise dispatch)": [
+      {
+        "executionId": "31a7ef31-ff90-409c-a1f8-e2cdfa25c481",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795085525126
+      },
+      {
+        "executionId": "31a7ef31-ff90-409c-a1f8-e2cdfa25c481",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795086281409
+      },
+      {
+        "executionId": "31a7ef31-ff90-409c-a1f8-e2cdfa25c481",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795086587990
+      }
+    ],
+    "3.1 Implement the admin-only, gym-scoped router": [
+      {
+        "executionId": "31a7ef31-ff90-409c-a1f8-e2cdfa25c481",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795085525196
+      },
+      {
+        "executionId": "31a7ef31-ff90-409c-a1f8-e2cdfa25c481",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795086588831
+      },
+      {
+        "executionId": "31a7ef31-ff90-409c-a1f8-e2cdfa25c481",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795086738361
+      }
+    ],
+    "3.2 Register the router in the v1 API": [
+      {
+        "executionId": "31a7ef31-ff90-409c-a1f8-e2cdfa25c481",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795085525284
+      },
+      {
+        "executionId": "31a7ef31-ff90-409c-a1f8-e2cdfa25c481",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795086739135
+      },
+      {
+        "executionId": "31a7ef31-ff90-409c-a1f8-e2cdfa25c481",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795086900198
+      }
+    ],
+    "4. Checkpoint — backend": [
+      {
+        "executionId": "31a7ef31-ff90-409c-a1f8-e2cdfa25c481",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795085525345
+      },
+      {
+        "executionId": "31a7ef31-ff90-409c-a1f8-e2cdfa25c481",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795086912280
+      }
+    ],
+    "5.1 Implement the feature API module": [
+      {
+        "executionId": "31a7ef31-ff90-409c-a1f8-e2cdfa25c481",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795085525408
+      },
+      {
+        "executionId": "31a7ef31-ff90-409c-a1f8-e2cdfa25c481",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795086912541
+      },
+      {
+        "executionId": "31a7ef31-ff90-409c-a1f8-e2cdfa25c481",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795087064023
+      }
+    ],
+    "5.2 Implement the Assistant chat page": [
+      {
+        "executionId": "31a7ef31-ff90-409c-a1f8-e2cdfa25c481",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795085525477
+      },
+      {
+        "executionId": "31a7ef31-ff90-409c-a1f8-e2cdfa25c481",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795087064952
+      },
+      {
+        "executionId": "31a7ef31-ff90-409c-a1f8-e2cdfa25c481",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795087571602
+      }
+    ],
+    "5.4 Mount the Assistant page and restore the Notifications route": [
+      {
+        "executionId": "31a7ef31-ff90-409c-a1f8-e2cdfa25c481",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795085525538
+      },
+      {
+        "executionId": "31a7ef31-ff90-409c-a1f8-e2cdfa25c481",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795087572635
+      },
+      {
+        "executionId": "31a7ef31-ff90-409c-a1f8-e2cdfa25c481",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795089263682
+      }
+    ],
+    "6. Checkpoint — full stack": [
+      {
+        "executionId": "31a7ef31-ff90-409c-a1f8-e2cdfa25c481",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795085525593
+      },
+      {
+        "executionId": "31a7ef31-ff90-409c-a1f8-e2cdfa25c481",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795089498713
+      }
+    ],
+    "1. Backend schemas and test tooling": [
+      {
+        "executionId": "31a7ef31-ff90-409c-a1f8-e2cdfa25c481",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795085751269
+      }
+    ],
+    "2. Implement the assistant service (`app/services/assistant.py`)": [
+      {
+        "executionId": "31a7ef31-ff90-409c-a1f8-e2cdfa25c481",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795086588095
+      }
+    ],
+    "3. Expose the assistant endpoint": [
+      {
+        "executionId": "31a7ef31-ff90-409c-a1f8-e2cdfa25c481",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795086900255
+      }
+    ],
+    "5. Frontend assistant surface": [
+      {
+        "executionId": "31a7ef31-ff90-409c-a1f8-e2cdfa25c481",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795089263775
+      }
+    ]
+  }
+}

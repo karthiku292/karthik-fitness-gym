@@ -1,0 +1,299 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1.1 Create `app/schemas/notification.py`": [
+      {
+        "executionId": "f6f88c93-5fd2-4ae3-8d4f-3ad19353702a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795080238895
+      },
+      {
+        "executionId": "f6f88c93-5fd2-4ae3-8d4f-3ad19353702a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795080301910
+      },
+      {
+        "executionId": "f6f88c93-5fd2-4ae3-8d4f-3ad19353702a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795080473783
+      }
+    ],
+    "2.1 Create the service module scaffold and rendering layer": [
+      {
+        "executionId": "f6f88c93-5fd2-4ae3-8d4f-3ad19353702a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795080238972
+      },
+      {
+        "executionId": "f6f88c93-5fd2-4ae3-8d4f-3ad19353702a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795080474625
+      },
+      {
+        "executionId": "f6f88c93-5fd2-4ae3-8d4f-3ad19353702a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795080816962
+      }
+    ],
+    "2.3 Implement the channel senders": [
+      {
+        "executionId": "f6f88c93-5fd2-4ae3-8d4f-3ad19353702a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795080239031
+      },
+      {
+        "executionId": "f6f88c93-5fd2-4ae3-8d4f-3ad19353702a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795080819004
+      },
+      {
+        "executionId": "f6f88c93-5fd2-4ae3-8d4f-3ad19353702a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795080964174
+      }
+    ],
+    "2.5 Implement `dispatch`": [
+      {
+        "executionId": "f6f88c93-5fd2-4ae3-8d4f-3ad19353702a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795080239093
+      },
+      {
+        "executionId": "f6f88c93-5fd2-4ae3-8d4f-3ad19353702a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795080964983
+      },
+      {
+        "executionId": "f6f88c93-5fd2-4ae3-8d4f-3ad19353702a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795081109019
+      }
+    ],
+    "2.11 Implement template resolution, CRUD, and context getters": [
+      {
+        "executionId": "f6f88c93-5fd2-4ae3-8d4f-3ad19353702a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795080239186
+      },
+      {
+        "executionId": "f6f88c93-5fd2-4ae3-8d4f-3ad19353702a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795081109688
+      },
+      {
+        "executionId": "f6f88c93-5fd2-4ae3-8d4f-3ad19353702a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795081308130
+      }
+    ],
+    "2.13 Implement expiry reminders": [
+      {
+        "executionId": "f6f88c93-5fd2-4ae3-8d4f-3ad19353702a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795080239250
+      },
+      {
+        "executionId": "f6f88c93-5fd2-4ae3-8d4f-3ad19353702a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795081308266
+      },
+      {
+        "executionId": "f6f88c93-5fd2-4ae3-8d4f-3ad19353702a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795081563870
+      }
+    ],
+    "2.17 Implement log listing": [
+      {
+        "executionId": "f6f88c93-5fd2-4ae3-8d4f-3ad19353702a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795080239311
+      },
+      {
+        "executionId": "f6f88c93-5fd2-4ae3-8d4f-3ad19353702a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795081563984
+      },
+      {
+        "executionId": "f6f88c93-5fd2-4ae3-8d4f-3ad19353702a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795081849259
+      }
+    ],
+    "3.1 Create `app/api/v1/routers/notifications.py`": [
+      {
+        "executionId": "f6f88c93-5fd2-4ae3-8d4f-3ad19353702a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795080239373
+      },
+      {
+        "executionId": "f6f88c93-5fd2-4ae3-8d4f-3ad19353702a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795081849460
+      },
+      {
+        "executionId": "f6f88c93-5fd2-4ae3-8d4f-3ad19353702a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795082078292
+      }
+    ],
+    "3.2 Register the router in `app/api/v1/router.py`": [
+      {
+        "executionId": "f6f88c93-5fd2-4ae3-8d4f-3ad19353702a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795080239432
+      },
+      {
+        "executionId": "f6f88c93-5fd2-4ae3-8d4f-3ad19353702a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795082078906
+      },
+      {
+        "executionId": "f6f88c93-5fd2-4ae3-8d4f-3ad19353702a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795082222072
+      }
+    ],
+    "4.1 Add idempotent starter-template seeding": [
+      {
+        "executionId": "f6f88c93-5fd2-4ae3-8d4f-3ad19353702a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795080239486
+      },
+      {
+        "executionId": "f6f88c93-5fd2-4ae3-8d4f-3ad19353702a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795080491766
+      },
+      {
+        "executionId": "f6f88c93-5fd2-4ae3-8d4f-3ad19353702a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795080818377
+      }
+    ],
+    "5. Checkpoint — backend complete": [
+      {
+        "executionId": "f6f88c93-5fd2-4ae3-8d4f-3ad19353702a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795080239547
+      },
+      {
+        "executionId": "f6f88c93-5fd2-4ae3-8d4f-3ad19353702a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795082255502
+      }
+    ],
+    "6.1 Create the typed Axios module": [
+      {
+        "executionId": "f6f88c93-5fd2-4ae3-8d4f-3ad19353702a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795080239610
+      },
+      {
+        "executionId": "f6f88c93-5fd2-4ae3-8d4f-3ad19353702a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795082255608
+      },
+      {
+        "executionId": "f6f88c93-5fd2-4ae3-8d4f-3ad19353702a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795082475896
+      }
+    ],
+    "7.1 Build the Notifications page": [
+      {
+        "executionId": "f6f88c93-5fd2-4ae3-8d4f-3ad19353702a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795080239672
+      },
+      {
+        "executionId": "f6f88c93-5fd2-4ae3-8d4f-3ad19353702a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795082476692
+      },
+      {
+        "executionId": "f6f88c93-5fd2-4ae3-8d4f-3ad19353702a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795082957207
+      }
+    ],
+    "8.1 Replace the `/app/notifications` placeholder": [
+      {
+        "executionId": "f6f88c93-5fd2-4ae3-8d4f-3ad19353702a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795080239732
+      },
+      {
+        "executionId": "f6f88c93-5fd2-4ae3-8d4f-3ad19353702a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795082957878
+      },
+      {
+        "executionId": "f6f88c93-5fd2-4ae3-8d4f-3ad19353702a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795083023375
+      }
+    ],
+    "9. Checkpoint — feature complete": [
+      {
+        "executionId": "f6f88c93-5fd2-4ae3-8d4f-3ad19353702a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795080239817
+      },
+      {
+        "executionId": "f6f88c93-5fd2-4ae3-8d4f-3ad19353702a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795083157237
+      }
+    ],
+    "1. Backend foundations — schemas and test infrastructure": [
+      {
+        "executionId": "f6f88c93-5fd2-4ae3-8d4f-3ad19353702a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795080473906
+      }
+    ],
+    "4. Backend seeding — `app/db/seed.py`": [
+      {
+        "executionId": "f6f88c93-5fd2-4ae3-8d4f-3ad19353702a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795080818441
+      }
+    ],
+    "2. Backend service — `app/services/notification.py` (built incrementally)": [
+      {
+        "executionId": "f6f88c93-5fd2-4ae3-8d4f-3ad19353702a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795081849329
+      }
+    ],
+    "3. Backend router and registration": [
+      {
+        "executionId": "f6f88c93-5fd2-4ae3-8d4f-3ad19353702a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795082222143
+      }
+    ],
+    "6. Frontend feature API — `src/features/notifications/api.ts`": [
+      {
+        "executionId": "f6f88c93-5fd2-4ae3-8d4f-3ad19353702a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795082475977
+      }
+    ],
+    "7. Frontend admin page — `src/pages/Notifications.tsx`": [
+      {
+        "executionId": "f6f88c93-5fd2-4ae3-8d4f-3ad19353702a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795082957295
+      }
+    ],
+    "8. Frontend route mount — `src/app/router.tsx`": [
+      {
+        "executionId": "f6f88c93-5fd2-4ae3-8d4f-3ad19353702a",
+        "chatSessionId": "sess_a6008102-7fbb-4e24-9539-412bf45637b3",
+        "timestamp": 1795083023454
+      }
+    ]
+  }
+}

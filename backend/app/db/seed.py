@@ -10,9 +10,10 @@ from app.core.config import settings
 from app.core.security import hash_password
 from app.db.session import SessionLocal
 from app.models.branch import Branch
-from app.models.enums import PlanType, UserRole
+from app.models.enums import NotificationChannel, PlanType, UserRole
 from app.models.gym import Gym
 from app.models.membership import MembershipPlan
+from app.models.notification import NotificationTemplate
 from app.models.trainer import Trainer
 from app.models.user import User
 
@@ -72,6 +73,25 @@ _DEFAULT_TRAINERS = [
 ]
 
 
+# Starter notification templates: one per event type, reused for both channels.
+# Bodies use the dotted-key placeholders the notification renderer supports
+# (Member / Gym / Membership / Payment context sources).
+_NOTIFICATION_TEMPLATES = {
+    "welcome": {
+        "subject": "Welcome to {gym.name}!",
+        "body": "Hi {member.name}, welcome to {gym.name}! Your member code is {member.code}.",
+    },
+    "membership_expiry": {
+        "subject": "Your {gym.name} membership is expiring",
+        "body": "Hi {member.name}, your membership expires on {membership.end_date}. Renew to keep training.",
+    },
+    "payment_receipt": {
+        "subject": "Payment received — {gym.name}",
+        "body": "Hi {member.name}, we received your payment of {payment.amount} ({payment.txn_code}). Thank you!",
+    },
+}
+
+
 # Brand theme: lavender accent on a near-black background.
 BRAND_PRIMARY = "#080808"
 BRAND_ACCENT = "#B794F6"
@@ -83,6 +103,43 @@ _LEGACY_COLORS = {"#f97316", "#d4af37", "#0a0a0b", "#0a0a0a", ""}
 def _slug(name: str) -> str:
     s = re.sub(r"[^a-z0-9]+", "-", name.strip().lower())
     return s.strip("-") or "gym"
+
+
+def _seed_notification_templates(db, gym_id: int) -> int:
+    """Create any missing starter templates for the gym, one per
+    (event_type, channel) pair across whatsapp + email (six total).
+
+    Each pair is checked independently so partial states are filled, repeat
+    runs create no duplicates, and templates an admin has already edited are
+    left untouched. Returns the number of templates created.
+    """
+    created = 0
+    for event_type, content in _NOTIFICATION_TEMPLATES.items():
+        for channel in (NotificationChannel.whatsapp, NotificationChannel.email):
+            exists = (
+                db.query(NotificationTemplate)
+                .filter(
+                    NotificationTemplate.gym_id == gym_id,
+                    NotificationTemplate.event_type == event_type,
+                    NotificationTemplate.channel == channel,
+                )
+                .first()
+            )
+            if exists is None:
+                db.add(
+                    NotificationTemplate(
+                        gym_id=gym_id,
+                        event_type=event_type,
+                        channel=channel,
+                        subject=content["subject"],
+                        body=content["body"],
+                        is_active=True,
+                    )
+                )
+                created += 1
+    if created:
+        logger.info("Created %d default notification templates", created)
+    return created
 
 
 def run() -> None:
@@ -144,6 +201,10 @@ def run() -> None:
             for p in _DEFAULT_PLANS:
                 db.add(MembershipPlan(gym_id=gym.id, is_active=True, features=_ELITE_PERKS, **p))
             logger.info("Created %d default membership plans", len(_DEFAULT_PLANS))
+
+        # Seed starter notification templates, filling only missing
+        # (event_type, channel) pairs so admin edits are preserved.
+        _seed_notification_templates(db, gym.id)
 
         db.commit()
         logger.info("Bootstrap complete. Gym slug: %s", gym.slug)

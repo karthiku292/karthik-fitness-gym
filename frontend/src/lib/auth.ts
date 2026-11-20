@@ -1,13 +1,16 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 import axios from "axios";
-import type { Tokens, User } from "@/lib/types";
+import { api } from "@/lib/api";
+import type { OtpRequestResponse, Tokens, User } from "@/lib/types";
 
 interface AuthState {
   tokens: Tokens | null;
   user: User | null;
   loading: boolean;
   login: (email: string, password: string) => Promise<void>;
+  otpRequest: (phone: string) => Promise<OtpRequestResponse>;
+  otpVerify: (phone: string, code: string) => Promise<void>;
   loadMe: () => Promise<void>;
   refresh: () => Promise<string | null>;
   logout: () => void;
@@ -29,6 +32,26 @@ export const useAuthStore = create<AuthState>()(
         body.append("password", password);
         const { data } = await raw.post<Tokens>("/auth/login", body, {
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        });
+        set({ tokens: data });
+        await get().loadMe();
+      },
+
+      async otpRequest(phone) {
+        // Request a one-time passcode for the phone. Returns the raw response
+        // so the login page can surface `dev_code` / `retry_after`.
+        const { data } = await api.post<OtpRequestResponse>("/auth/otp/request", {
+          phone,
+        });
+        return data;
+      },
+
+      async otpVerify(phone, code) {
+        // Verify the code; on success persist the tokens and load the current
+        // user, mirroring the existing password `login` flow.
+        const { data } = await api.post<Tokens>("/auth/otp/verify", {
+          phone,
+          code,
         });
         set({ tokens: data });
         await get().loadMe();

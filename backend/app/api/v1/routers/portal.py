@@ -12,10 +12,12 @@ from app.models.member import Member
 from app.models.membership import Membership, MembershipPlan
 from app.models.payment import Payment
 from app.models.enums import MembershipStatus
+from app.schemas.attendance import QRTokenOut
 from app.schemas.fitness import PlanOut
 from app.schemas.member import MemberOut
 from app.schemas.payment import PaymentOut
 from app.schemas.portal import PortalAttendance, PortalMembership
+from app.services import attendance as attendance_svc
 
 router = APIRouter(prefix="/me", tags=["portal"])
 
@@ -119,3 +121,19 @@ def my_diet(db: DbSession, current_user: CurrentUser):
         return None
     text = p.meals.get("text") if isinstance(p.meals, dict) else None
     return PlanOut(id=p.id, gym_id=p.gym_id, name=p.name, description=p.description, details=text)
+
+
+@router.get("/qr", response_model=QRTokenOut)
+def my_qr(db: DbSession, current_user: CurrentUser):
+    member = _member(db, current_user)
+    row = attendance_svc.get_or_create_token(db, member.gym_id, member.id)
+    db.commit()
+    return row
+
+
+@router.post("/qr/regenerate", response_model=QRTokenOut)
+def regenerate_my_qr(db: DbSession, current_user: CurrentUser):
+    member = _member(db, current_user)
+    row = attendance_svc.regenerate_token(db, member.gym_id, member.id)
+    db.commit()
+    return row
